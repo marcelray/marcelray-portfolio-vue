@@ -144,6 +144,12 @@ body, html {
 				color: #333;
 				font-size: 1.7rem;
 				font-weight: 600;
+				/* FANCY PANTS */
+				// color: @link-color;
+				// background: @button-background-light;
+				// -webkit-background-clip: text;
+				// -webkit-text-fill-color: transparent;
+				// text-shadow: #00000033 1px 2px;
 			}
 
 			.mr--nav-global {
@@ -436,9 +442,8 @@ body, html {
 		}
 
 		.mr--modal {
-			left: 50%;
-			top: 50%;
-			transform: translate(-50%, -50%);
+			.center-hv;
+
 			background: @bg-color-main;
 
 			box-shadow: #11111133 0 0 2rem 1rem;
@@ -483,11 +488,11 @@ body, html {
 		}
 	
 		.mr--email {
-			margin-bottom: 1rem;
+			margin-bottom: 5rem;
 		}
 	
 		.mr--copyright {
-			color: #999;
+			color: #aaa;
 		}
 	}
 
@@ -509,5 +514,23 @@ body, html {
 			opacity: 0;
 			right: 1rem;
 		}
+	}
+}
+
+.favicon {
+	.center-hv;
+
+	font-family: @font-titles;
+	color: #fff;
+	background: @button-background;
+	width: 260px;
+	height: 260px;
+	font-size: 116px;
+	letter-spacing: -.3rem;
+
+	.initials {
+		.center-hv;
+		text-align: center;
+		margin-left: -.5rem;
 	}
 }
