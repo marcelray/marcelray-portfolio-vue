@@ -14,7 +14,7 @@
 			"client": "National Park Service",
 			"date": "2020-03-01",
 			"intro": "Modernize how the public accesses a beloved national park’s backcountry." ,
-			"description": "<p>Details coming soon.</p>",
+			"description": "<p>Modernized and improved internal and visitor-facing backcountry permitting processes, station visitor flows, and internal and public-facing web-based tools.</p><p>More details coming soon.</p>",
 			"roles": "Web and desktop front end development, UX and UI design, enclosure design, Linux system administration, project management",
 			"colophon": "jQuery, MySQL, Python, PHP, C#/.NET, WPF, Adobe Illustrator, Adobe InDesign",
 			"tags": [],
@@ -23,10 +23,6 @@
 				{
 					"type": "image" ,
 					"url": "thumb.jpg"
-				},
-				{
-					"type": "image" ,
-					"url": "image-01.jpg"
 				}
 			],
 			"links": [
@@ -44,9 +40,9 @@
 			"client": "Oculus Research (Facebook Reality Labs)",
 			"date": "2018-01-15",
 			"intro": "Invent new ways for humans to interact with their physical and digital worlds." ,
-			"description": "<p>Details coming soon.</p>",
+			"description": "<p>Defined, prototyped, and tested new digital and physical interactions and experiences for the future of virtual reality and augmented reality. Prototypes and demos were critical for senior executive leadership to evaluate the potential of radically new input/output paradigms.</p><p>More details coming soon.</p>",
 			"roles": "Hardware and AR/VR prototyping, executive demo development, interaction design",
-			"colophon": "Unity 3D, Unreal Engine, Oculus Rift, Microsoft Hololens, Arduino, Node.js, socket messaging",
+			"colophon": "Unity 3D, Unreal Engine, Oculus Rift, Microsoft Hololens, Arduino, Raspberry Pi, Node.js, socket messaging",
 			"tags": [],
 			"thumbnail": "thumb.jpg" ,
 			"media": [
