@@ -138,7 +138,14 @@
 						v-for="project in getGroupProjects(projectGroup)" 
 						v-if="project.display"
 						>
-						<div class="mr--project-thumbnail"><a :href="'#' + project.id"><img :alt="project.title" :src="'http://marcelray.com/utils/slir/?w=600&c=16:9&i=/assets/projects/'+project.id+'/'+project.thumbnail" /></a></div>
+						<div class="mr--project-thumbnail">
+							<a :href="'#' + project.id">
+								<img
+									:alt="project.title" 
+									:src="'http://marcelray.com/utils/slir/?w=600&c=10x7&i=/assets/projects/'+project.id+'/'+project.thumbnail" 
+									/>
+								</a>
+							</div>
 						<div class="mr--content">
 							<h2><a :href="'#' + project.id" v-on:click="showProjectDetails(project)">{{ project.title }}</a></h2>
 							<div class="mr--project-intro">{{project.intro}}</div>
