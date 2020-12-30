@@ -1,0 +1,494 @@
+{
+	"groupings": [
+		{
+			"title": "Culture, Education &amp; Environment",
+			"categories": "culture,education,environment,commercial"
+		}
+	],
+	"projects": [
+		{
+			"id": "nps-noca",
+			"category": "environment",
+			"display": true,
+			"title": "North Cascades National Park",
+			"client": "National Park Service",
+			"date": "2020-03-01",
+			"intro": "Modernize how the public accesses a beloved national park’s backcountry." ,
+			"description": "<p>Details coming soon.</p>",
+			"roles": "Web and desktop front end development, UX and UI design, enclosure design, Linux system administration, project management",
+			"colophon": "jQuery, MySQL, Python, PHP, C#/.NET, WPF, Adobe Illustrator, Adobe InDesign",
+			"tags": [],
+			"thumbnail": "thumb.jpg" ,
+			"media": [
+				{
+					"type": "image" ,
+					"url": "thumb.jpg"
+				},
+				{
+					"type": "image" ,
+					"url": "image-01.jpg"
+				}
+			],
+			"links": [
+				{
+					"url": "https://www.nps.gov/noca/planyourvisit/backcountry-availability.htm",
+					"title": "North Cascades Backcountry Availability"
+				}
+			]
+		},
+		{
+			"id": "ovr-research",
+			"category": "commercial",
+			"display": true,
+			"title": "Oculus AR/VR Research",
+			"client": "Oculus Research (Facebook Reality Labs)",
+			"date": "2018-01-15",
+			"intro": "Invent new ways for humans to interact with their physical and digital worlds." ,
+			"description": "<p>Details coming soon.</p>",
+			"roles": "Hardware and AR/VR prototyping, executive demo development, interaction design",
+			"colophon": "Unity 3D, Unreal Engine, Oculus Rift, Microsoft Hololens, Arduino, Node.js, socket messaging",
+			"tags": [],
+			"thumbnail": "thumb.jpg" ,
+			"media": [
+				{
+					"type": "image" ,
+					"url": "thumb.jpg"
+				}
+			],
+			"links": [
+				{
+					"url": "https://www.oculus.com/blog/inventing-the-future/?locale=en_US",
+					"title": "Inventing the Future by Michael Abrash, Chief Scientist at Oculus Research"
+				}
+			]
+		},
+		{
+			"id": "msft-hackingstem",
+			"category": "education",
+			"display": true,
+			"title": "Microsoft Hacking STEM Education",
+			"client": "Microsoft Office Education",
+			"date": "2017-09-01",
+			"intro": "Empower students and educators to visualize and analyze their world in Excel." ,
+			"description": "<p>I executed a major code migration and UI redesign for a Microsoft Excel add-in utilized by STEM educators and hobbyists to display real-time data from Arduino-based microcontrollers in Excel.</p><p>I quickly familiarized myself with the Visual Studio Tools for Office to upgrade the existing VB prototype to a production-ready, shippable C# product. In this process, I also oversaw the UX/UI design track to prepare the add-in for wider release. My efforts yielded a vastly improved user experience, greater reliability and a more robust feature-set.</p><p>I further supported, built and prototyped Arduino-based projects targeted toward middle school students. My “whisker” speed sensor design was used in an educational Hot Wheels physics project in partnership with Mattel.</p>",
+			"roles": "C#/.NET development, UX design, Arduino/electronics prototyping",
+			"colophon": "Visual Studio, C#/.NET, Arduino, Serial/COM control, Visual Studio Tools for Office (VSTO)",
+			"tags": [],
+			"thumbnail": "thumb.jpg" ,
+			"media": [
+				{
+					"type": "image" ,
+					"url": "thumb.jpg"
+				},
+				{
+					"type": "image" ,
+					"url": "image-01.png"
+				},
+				{
+					"type": "image" ,
+					"url": "image-02.png"
+				},
+				{
+					"type": "image" ,
+					"url": "image-04.png"
+				}
+			],
+			"links": [
+				{
+					"url": "http://aka.ms/HackingSTEM",
+					"title": "Hacking STEM Homepage"
+				}
+			]
+		},
+		{
+			"id": "amzn-go",
+			"category": "commercial",
+			"display": true,
+			"title": "Amazon Go Store",
+			"client": "Amazon",
+			"date": "2015-10-01",
+			"intro": "Simulate, design, and test a revolutionary check-out free retail store." ,
+			"description": "<p>I was a critical member of the product design team working to create Amazon&apos;s revolutionary, completely checkout-free retail shopping experience centered around the vision of &ldquo;Just Walk Out&rdquo;. I directed the prototyping and &ldquo;Wizard of Oz&rdquo; simulation efforts and proved them to be invaluable media for design exploration and building realistic, testable experiences that weren&apos;t yet technically possible. These simulations and prototypes were used by our design team and executive leadership to (in)validate experiences throughout the store&apos;s development.</p><p>In this role, I utilized an eclectic array of technologies to iteratively build and simulate these experiences, including: Wii Remotes, lighting controls, socket communication servers, and scores of Android tablets and phones running custom Cordova apps.</p>",
+			"roles": "Prototyping and usability testing direction, motion design direction, executive leadership presentations",
+			"colophon": "Cordova, TypeScript, AngularJS, Node.js, JavaScript, HTML5/CSS3",
+			"tags": [
+				"Flash",
+				"Flex",
+				"AIR",
+				"kiosk"
+			],
+			"thumbnail": "image-04.png" ,
+			"media": [
+				{
+					"type": "image" ,
+					"url": "image-01.png"
+				},
+				{
+					"type": "image" ,
+					"url": "image-02.png"
+				},
+				{
+					"type": "image" ,
+					"url": "image-03.png"
+				},
+				{
+					"type": "image" ,
+					"url": "image-04.png"
+				},
+				{
+					"type": "image" ,
+					"url": "image-05.png"
+				},
+				{
+					"type": "image" ,
+					"url": "image-06.png"
+				},
+				{
+					"type": "image" ,
+					"url": "image-07.png"
+				}
+			],
+			"links": [
+				{
+					"url": "https://amazon.com/b?ie=UTF8&node=16008589011",
+					"title": "Amazon Go Overview"
+				}
+			]
+		},
+		{
+			"id": "msft-band",
+			"category": "commercial",
+			"display": true,
+			"title": "Microsoft Band",
+			"client": "Microsoft",
+			"date": "2014-08-01",
+			"intro": "Empower designers to quickly design and test end-to-end experiences." ,
+			"description": "<p>Part of a small, start-up minded product design team. Collaborated with UX and UI designers on design and implementation of visual and UI flow explorations for the Microsoft Band. Developed rapid UX prototypes and a high fidelity, end-to-end touchscreen prototype which was critical for formal usability testing and presentations to executive leadership before the hardware was capable of displaying the UI.</p>",
+			"roles": "UX and research prototyping, brainstorming, motion/design integration",
+			"colophon": "Cordova, JavaScript, TypeScript, AngularJS, HTML5/CSS3",
+			"tags": [
+				"Flash",
+				"Flex",
+				"AIR",
+				"kiosk"
+			],
+			"thumbnail": "thumb.jpg" ,
+			"media": [
+				{
+					"type": "video",
+					"url": "video.mp4",
+					"poster": "thumb.jpg"
+				}
+			]
+		},
+		{
+			"id": "msft-connectedcar",
+			"category": "commercial",
+			"display": true,
+			"title": "Microsoft Connected Car",
+			"client": "Microsoft",
+			"date": "2013-03-01",
+			"intro": "Build platforms, tools and prototypes to design safer ways for drivers to stay connected." ,
+			"description": "<p>Assisted UX and UI designers in brainstorming and rapidly prototyping design explorations and research hypotheses for next generation, in-car infotainment systems. Built out a high fidelity, custom driving simulator with system tools to aid prototypes in communicating with hardware controls (steering wheel buttons, touch screens, etc.) and simulator software statistics and data.</p>",
+			"roles": "UX and research prototyping, brainstorming, driving simulator management",
+			"colophon": "Flash, ActionScript 3, .NET/C#",
+			"tags": [
+				"Flash",
+				"Flex",
+				"AIR",
+				"kiosk"
+			],
+			"thumbnail": "thumb.jpg" ,
+			"media": [
+				{
+					"type": "image",
+					"url": "thumb.jpg"
+				},
+				{
+					"type": "image",
+					"url": "image-01.jpg"
+				},
+				{
+					"type": "image",
+					"url": "image-02.jpg"
+				}
+			]
+		},
+		{
+			"id": "bwco-yfiptm",
+			"category": "culture",
+			"display": true,
+			"title": "Vulcan Interactive Street Art",
+			"client": "Vulcan Real Estate",
+			"collaborator": "Belle &amp; Wissell",
+			"date": "2011-10-01",
+			"intro": "Puzzle passers by with a fun interactive experience in Seattle’s budding South Lake Union." ,
+			"description": "<p>Part of a large-scale effort by Paul Allen’s Vulcan to revitalize the South Lake Union neighborhood, this outdoor installation bridges the gap between interactive and art. Passers by are given the opportunity to capture and add their own likeliness to the piece.</p><p>Similar to the Scream Booth, it features a touchscreen UI with webcam preview to aid visitors in aligning their faces in the frame before capturing their image with a DSLR. The image is then processed, sliced up and animated across 5 displays adjacent to the capture station.</p><p>A custom capturing tool was built using .NET and C# to control the Canon DSLR. Communication between the capture station, capture tool and passive displays was all managed via socket messaging.</p>",
+			"roles": "Lead developer and technologist, ideation, brainstorming",
+			"colophon": "Flash, AIR, ActionScript 3, Pixel Bender, .NET/C#, Canon ED-SDK",
+			"tags": [
+				"Flash",
+				"AIR",
+				"C#",
+				".NET",
+				"kiosk",
+				"Pixel Bender"
+			],
+			"thumbnail": "thumb.jpg" ,
+			"media": [
+				{
+					"type": "video",
+					"url": "video.mp4",
+					"poster": "thumb.jpg"
+				}
+			],
+			"links": [
+				{
+					"url": "http://www.bwco.info/work/your-face/",
+					"title": "Belle &amp; Wissell Project Page"
+				}
+			]
+		},
+		{
+			"id": "bwco-screambooth",
+			"category": "culture",
+			"display": true,
+			"title": "MoPOP Scream Booth Exhibit",
+			"client": "Museum of Pop Culture (MoPOP), Seattle",
+			"collaborator": "Belle &amp; Wissell",
+			"date": "2011-10-01",
+			"intro": "Capture the essence of terror and villainy then share it with the world." ,
+			"description": "<p>Visitors to the EMP’s <em>Can’t Look Away</em> horror exhibit can capture their terror or villainy in the extremely popular Scream Booth. After scanning their soul for fear, the interactive assigns a role (victim or villain), provides scream inspiration, then captures a succession of 4 photos via DSLR. Screamers’ photos are then displayed outside the booth for all to see. Additionally, they can opt into sharing them on Flickr and receiving an email from a Constant Contact email campaign.</p><p>DSLR capturing was controlled with a custom-built capturing tool utilizing the official Canon ED-SDK in .NET. Communication between the capture station, capture tool and passive displays was all managed via socket messaging.</p>",
+			"roles": "Lead developer and technologist",
+			"colophon": "Flash, AIR, ActionScript 3, .NET/C#, Flickr API, Constant Contact API, Canon ED-SDK",
+			"links": [
+				{
+					"url": "http://www.bwco.info/work/cant-look-away/",
+					"title": "Belle &amp; Wissell Project Page"
+				},
+				{
+					"url": "http://www.empmuseum.org/at-the-museum/current-exhibits/cant-look-away-the-lure-of-horror-film.aspx",
+					"title": "Can’t Look Away: The Lure of Horror in Film at EMP"
+				},
+				{
+					"url": "http://www.flickr.com/photos/empmuseum/sets/72157627782439260/",
+					"title": "Flickr Set"
+				}
+			],
+			"tags": [
+				"Flash",
+				"AIR",
+				"C#",
+				".NET",
+				"kiosk"
+			],
+			"thumbnail": "thumb.jpg" ,
+			"media": [
+				{
+					"type": "video" ,
+					"url": "video.mp4",
+					"poster": "thumb.jpg"
+				}
+			]
+		},
+		{
+			"id": "bwco-nirvana",
+			"category": "culture",
+			"display": true,
+			"title": "MoPOP Nirvana Confessional Exhibit",
+			"client": "Museum of Pop Culture (MoPOP), Seattle",
+			"collaborator": "Belle &amp; Wissell",
+			"date": "2011-04-01",
+			"intro": "Give the power of personal story telling to Nirvana fans at Seattle’s coolest museum." ,
+			"description": "<p>Visitors to the MoPOP’s highly anticipated <em>Nirvana: Taking Punk to the Masses</em> exhibition can share their 90-second Nirvana \"confessional\" in a private booth featuring a touch screen interface and HD webcam. Upon submission, it is projected just outside the booth alongside other confessions and rare Nirvana footage in a mini-theater setting.</p><p>I built the recording interface and functionality while hiring and managing a subcontractor to build the theater playback interface. Recording was done using an HD capable USB webcam in Adobe’s Flash Media Live Encoder via the native process API in Adobe AIR. Communication between recording and playback machines was managed with socket messaging.</p>",
+			"roles": "Development lead, kiosk configuration, subcontractor management",
+			"colophon": "Flex 4, AIR, Cairngorm, HD video capture, .NET/C#",
+			"tags": [
+				"Flex",
+				"AIR",
+				"video",
+				"C#",
+				"Cairngorm",
+				"kiosk"
+			],
+			"thumbnail": "thumb.jpg" ,
+			"media": [
+				{
+					"type": "video" ,
+					"url": "video.mp4",
+					"poster": "thumb.jpg"
+				}
+			],
+			"links": [
+				{
+					"url": "http://www.bwco.info/work/nirvana-taking-punk-to-the-masses/",
+					"title": "Belle &amp; Wissell Project Page"
+				},
+				{
+					"url": "http://www.empmuseum.org/at-the-museum/current-exhibits/nirvana-taking-punk-to-the-masses.aspx",
+					"title": "Nirvana: Taking Punk to the Masses at EMP"
+				}
+			]
+		},
+		{
+			"id": "kodk-effects",
+			"category": "commercial",
+			"display": false,
+			"title": "Kodak Photo Effects",
+			"client": "Eastman Kodak",
+			"collaborator": "Bressler Research Group",
+			"date": "2009-11-01",
+			"intro": "Simulate and test in-camera photo effects." ,
+			"description": "<p>Developed a touch-based photo effects prototype UI for usability and market research purposes for a leading US digital camera company. Flex and Adobe AIR proved the perfect fit for the task of quickly crafting a standalone UI while easily integrating with Adobe’s powerful Pixel Bender real-time effects engine.</p>",
+			"roles": "UI development, effects R&amp;D, design integration",
+			"colophon": "Flex 3, AIR, Pixel Bender",
+			"tags": [
+				"Flex",
+				"AS3",
+				"PixelBender",
+				"devices",
+				"prototyping"
+			],
+			"thumbnail": "thumb.jpg" ,
+			"media": [
+				{
+					"type": "image" ,
+					"url": "thumb.jpg"
+				}
+			]
+		},
+		{
+			"id": "ntdo-vodf",
+			"category": "commercial",
+			"display": true,
+			"title": "Nintendo Wii API Design",
+			"client": "Nintendo of America",
+			"date": "2009-06-01",
+			"intro": "Provide video content partners an official API for streaming on the Wii." ,
+			"description": "<p>First utilized by the BBC for their popular iPlayer, the Video On-Demand Framework (VODF) Flash Lite API enables official partners to build Wii Channels using ActionScript 2 and Flash. Utmost attention was paid to class simplicity and extensibility, including building a robust, AS3 inspired event model. All source was meticulously documented and beautifully formatted.</p>",
+			"roles": "Lead API design and development, formal documentation",
+			"colophon": "Flash Lite 3.1, ActionScript 2, ASDoc",
+			"links": [
+				{
+					"url": "http://www.bbc.co.uk/blogs/bbcinternet/2009/11/the_new_iplayer_on_the_nintend.html",
+					"title": "BBC Press Release"
+				},
+				{
+					"url": "http://www.nintendo.co.uk/NOE/en_GB/news/2009/bbc_and_nintendo_launch_new_bbc_iplayer_as_a_wii_channel_15051.html",
+					"title": "Nintendo Press Release"
+				}
+			],
+			"tags": [
+				"FlashLite",
+				"API design",
+				"architect",
+				"lead",
+				"devices",
+				"optimization",
+				"video"
+			],
+			"thumbnail": "thumb.jpg" ,
+			"media": [
+				{
+					"type": "image" ,
+					"url": "thumb.jpg"
+				}
+			]
+		},
+		{
+			"id": "kodk-easyshareone",
+			"category": "commercial",
+			"display": false,
+			"title": "Kodak EasyShare-One Interface",
+			"client": "Eastman Kodak",
+			"date": "2005-03-01",
+			"intro": "" ,
+			"description": "<p>Brought my Flash expertise to a group of Java/C++ engineers in building a Flash UI for the highly anticipated consumer touch screen camera.</p>",
+			"roles": "Design integration and optimization, performance testing and optimization, build management, localization management",
+			"colophon": "ActionScript 2, MVC",
+			"links": [
+				{
+					"url": "http://www.imaging-resource.com/PRODS/ES1/ES1A.HTM",
+					"title": "Product Review at Imaging Resource"
+				}
+			],
+			"tags": [
+				"Flash",
+				"AS2",
+				"optimization",
+				"devices",
+				"skinning"
+			],
+			"thumbnail": "thumb.jpg" ,
+			"media": [
+				{
+					"type": "image",
+					"url": "thumb.jpg"
+				}
+			]
+		},
+		{
+			"id": "bwco-abmc",
+			"category": "education",
+			"display": true,
+			"title": "Battle Monument Exhibit Platform",
+			"client": "American Battle Monuments Commission / Normandy Cemetary",
+			"collaborator": "Belle &amp; Wissell",
+			"date": "2012-06-05",
+			"intro": "Architect a robust kiosk platform to scale to over 44 unique battle monuments throughout the world." ,
+			"description": "<p>The World War II timeline kiosk gives visitors to the American cemetery and war memorial in Normandy, France a chance to truly see the world scope and impact of the second great war.\n\t\t\t<p>The code base was built as a fully localizable and skinnable system to be reused for other battle monuments throughout the world. It has since been used to build 11 new memorial experiences.</p>",
+			"roles": "Lead developer and technologist",
+			"colophon": "Flex 4, Spark skinning, localization, RobotLegs, AIR, ActionScript 3",
+			"tags": [
+				"Flash",
+				"Flex",
+				"AIR",
+				"kiosk"
+			],
+			"thumbnail": "thumb.jpg" ,
+			"media": [
+				{
+					"type": "video" ,
+					"url": "video.mp4",
+					"poster": "thumb.jpg"
+				}
+			]
+		},
+		{
+			"id": "bwco-furseals",
+			"category": "education",
+			"display": true,
+			"title": "NASA Fur Seals Interactive",
+			"client": "Seattle Aquarium",
+			"collaborator": "Belle &amp; Wissell",
+			"date": "2011-04-01",
+			"intro": "Give visitors an exciting view into the life of fur seals via an important collaboration." ,
+			"description": "<p>Collaborated with renowned experience design shop Belle &amp; Wissell to create an engaging, touch-screen interactive kiosk to be housed in the fur seals area of the Seattle Aquarium. Its purpose was to educate aquarium visitors, young and old, about the aquarium’s partnership (and grantee status) with NASA to study the endangered northern fur seal.</p><p>A custom touchscreen tablet remote control UI and PHP-based CMS were also built to allow interpreters to design presentations. These presentations could display photo and video slides as well as the kiosk UI on a big screen HD display.</p>",
+			"roles": "Lead developer and technologist, automated stress testing, performance optimization over long durations, custom CMS development",
+			"colophon": "Flex 4, Flash 3D, Cairngorm, PHP, socket communication",
+			"tags": [
+				"Flex",
+				"Cairngorm",
+				"web-services",
+				"publishing",
+				"AS3",
+				"Flash",
+				"skinning",
+				"optimization"
+			],
+			"thumbnail": "thumb.jpg" ,
+			"media": [
+				{
+					"type": "image" ,
+					"url": "thumb.jpg"
+				}
+			],
+			"links": [
+				{
+					"url": "http://www.seattleaquarium.org/page.aspx?pid=716",
+					"title": "Project details at the Seattle Aquarium’s website."
+				}
+			]
+		}
+	]
+}

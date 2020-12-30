@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Marcel Ray : Design Technologist</title>
+
+	<script src="//cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
+
+	<script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<link rel="stylesheet" href="assets/styles/reset.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap">
+
+	<link rel="stylesheet/less" type="text/css" href="assets/styles/styles.less">
+	<script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
+
+</head>
+
+<body>
+
+	<div id="mr--app" v-bind:class="{ 'mr--modal-open': currentProject }">
+
+		<div class="mr--modal-container" v-if="currentProject">
+			
+			<div class="mr--modal-background" v-on:click="hideProjectDetails()"></div>
+			
+			<div class="mr--project-detail mr--modal" v-if="currentProject">
+				
+				<button class="mr--close-button" v-on:click="hideProjectDetails()">&times;</button>
+				<div class="mr--project-loadIndicator" class="loadIndicator" style="display: none;"></div>
+				
+				<div class="mr--content">
+						
+					<section class="mr--project-media">
+						<div 
+							class="mr--scroll-arrow-right" 
+							v-if="currentProject.media.length > 1"
+							></div>
+						<ul 
+							class="mr--project-media-items" 
+							v-bind:class="{ 'mr--media-single': currentProject.media.length === 1 }"
+							>
+							<li class="mr--media-container" v-for="media in currentProjectVideos">
+								<video 
+									height="100%"
+									controlsList="nodownload" 
+									controls autostart playsinline autoplay
+									:poster="'/assets/projects/'+currentProject.id+'/'+media.poster">
+									<source :src="'http://marcelray.com/assets/projects/'+currentProject.id+'/'+media.url" type="video/mp4" />
+								</video></li>
+							<li class="mr--media-container" v-for="media in currentProjectImages">
+								<img  
+									:alt="currentProject.title" 
+									:src="'http://marcelray.com/utils/slir/?h=300&c=16x9&i=/assets/projects/'+currentProject.id+'/'+media.url"
+									/>
+							</li>
+						</ul>
+					</section>
+
+					<section class="mr--header">
+						<h1 class="mr--project-title" v-html="currentProject.title"></h1>
+						<div class="mr--project-intro" v-html="currentProject.intro"></div>
+					</section>
+
+					<section class="mr--project-details">
+
+						
+						<section class="mr--project-brief">
+							<h2>Company/Client</h2>
+							<div class="mr--content" v-html="currentProject.client"></div>
+						</section>
+
+						<section class="mr--project-roles">
+							<h2>Roles</h2>
+							<div class="mr--content" v-html="currentProject.roles"></div>
+						</section>
+
+						<section class="mr--project-brief">
+							<h2>Project Brief</h2>
+							<div class="mr--content" v-html="currentProject.description"></div>
+						</section>
+
+						<section class="mr--project-colophon" v-if="currentProject.colophon">
+							<h2>Colophon</h2>
+							<div class="mr--content" v-html="currentProject.colophon"></div>
+						</section>
+
+						<section class="mr--project-links" v-if="currentProject.links.length > 0">
+							<h2>More Info</h2>
+							<ul>
+								<li v-for="link in currentProject.links">
+									<a :href="link.url" target="_blank" v-html="link.title"></a>
+								</li>
+								<li></li>
+							</ul>
+						</section>
+
+					</section>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<article class="mr--content">
+				
+			<div class="mr--header">
+
+				<div class="mr--header-group">
+					<h1><a href="/">Marcel Ray</a></h1>
+					<!-- <h1>prototypi.co</h1> -->
+				</div>
+				
+				<nav id="mr--nav-global">
+					<!-- <h2>Site Navigation</h2>
+						<ul>
+							<li><a href="portfolio.php" class="selected">Portfolio</a></li>
+							<li><a href="resume.php">R&eacute;sum&eacute;</a></li>
+							<li><a href="mailto:mr@marcelray.com">Email</a></li>
+						</ul> -->
+					</nav>
+					
+				</div>
+				
+			<div class="mr--intro">
+				<div class="mr--content">Marcel is a design-minded technologist focused on ideating, prototyping, and developing innovative experiences that connect physical and digital worlds.</div>
+			</div>
+
+			<div class="mr--group" v-for="projectGroup in projectGroups">
+				<!-- <h2 class="mr--group-title" v-html="projectGroup.title"></h2> -->
+				<ul class="mr--projects">
+					<li 
+						class="mr--project" 
+						v-for="project in getGroupProjects(projectGroup)" 
+						v-if="project.display"
+						>
+						<div class="mr--project-thumbnail"><a :href="'#' + project.id"><img :alt="project.title" :src="'http://marcelray.com/utils/slir/?w=600&c=16:9&i=/assets/projects/'+project.id+'/'+project.thumbnail" /></a></div>
+						<div class="mr--content">
+							<h2><a :href="'#' + project.id" v-on:click="showProjectDetails(project)">{{ project.title }}</a></h2>
+							<div class="mr--project-intro">{{project.intro}}</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</article>
+
+	</div>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineLite.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/easing/EasePack.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/plugins/CSSPlugin.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/scripts/portfolio.js"></script>
+
+	<script>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-22942940-1']);
+	_gaq.push(['_trackPageview']);
+	(function()
+	{
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+	</script>
+
+</body>
+
+</html>
