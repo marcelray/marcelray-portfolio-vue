@@ -4,15 +4,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Marcel Ray : Design Technologist</title>
+	<title>Marcel Ray, Design Technologist</title>
 
 	<script src="//cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
 
 	<script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 	<link rel="stylesheet" href="assets/styles/reset.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet/less" type="text/css" href="assets/styles/styles.less">
 	<script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
@@ -22,6 +22,55 @@
 <body>
 
 	<div id="mr--app" v-bind:class="{ 'mr--modal-open': currentProject }">
+
+		<article class="mr--content">
+				
+			<div class="mr--header">
+
+				<div class="mr--header-group">
+					<h1>Marcel Ray</h1>	
+				</div>
+
+				<nav class="mr--nav-global">
+					<a href="mailto:mr@marcelray.com?subject=Hello!">Email</a>
+					<a href="assets/downloads/marcelray-resume.pdf">Résumé</a>
+					<a href="https://linkedin.com/in/marcelray" target="_blank">LinkedIn</a>
+				</nav>
+					
+			</div>
+				
+			<div class="mr--intro">
+				<div class="mr--content">Marcel is a design-minded technologist focused on ideating, prototyping, and developing innovative experiences that connect physical and digital worlds.</div>
+			</div>
+
+
+
+
+			<div class="mr--group" v-for="projectGroup in projectGroups">
+				<!-- <h2 class="mr--group-title" v-html="projectGroup.title"></h2> -->
+				<ul class="mr--projects">
+					<li 
+						class="mr--project" 
+						v-for="project in getGroupProjects(projectGroup)" 
+						v-if="project.display"
+						>
+						<div class="mr--project-thumbnail">
+							<a :href="'#' + project.id">
+								<img
+									:alt="project.title" 
+									:src="'http://marcelray.com/utils/slir/?w=600&c=10x7&i=/assets/projects/'+project.id+'/'+project.thumbnail" 
+									/>
+								</a>
+							</div>
+						<div class="mr--content">
+							<h2><a :href="'#' + project.id" v-on:click="showProjectDetails(project)">{{ project.title }}</a></h2>
+							<div class="mr--project-intro">{{project.intro}}</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+		</article>
 
 		<div class="mr--modal-container" v-if="currentProject">
 			
@@ -106,55 +155,10 @@
 
 		</div>
 
-		<article class="mr--content">
-				
-			<div class="mr--header">
-
-				<div class="mr--header-group">
-					<h1><a href="/">Marcel Ray</a></h1>
-					<!-- <h1>prototypi.co</h1> -->
-				</div>
-				
-				<nav id="mr--nav-global">
-					<!-- <h2>Site Navigation</h2>
-						<ul>
-							<li><a href="portfolio.php" class="selected">Portfolio</a></li>
-							<li><a href="resume.php">R&eacute;sum&eacute;</a></li>
-							<li><a href="mailto:mr@marcelray.com">Email</a></li>
-						</ul> -->
-					</nav>
-					
-				</div>
-				
-			<div class="mr--intro">
-				<div class="mr--content">Marcel is a design-minded technologist focused on ideating, prototyping, and developing innovative experiences that connect physical and digital worlds.</div>
-			</div>
-
-			<div class="mr--group" v-for="projectGroup in projectGroups">
-				<!-- <h2 class="mr--group-title" v-html="projectGroup.title"></h2> -->
-				<ul class="mr--projects">
-					<li 
-						class="mr--project" 
-						v-for="project in getGroupProjects(projectGroup)" 
-						v-if="project.display"
-						>
-						<div class="mr--project-thumbnail">
-							<a :href="'#' + project.id">
-								<img
-									:alt="project.title" 
-									:src="'http://marcelray.com/utils/slir/?w=600&c=10x7&i=/assets/projects/'+project.id+'/'+project.thumbnail" 
-									/>
-								</a>
-							</div>
-						<div class="mr--content">
-							<h2><a :href="'#' + project.id" v-on:click="showProjectDetails(project)">{{ project.title }}</a></h2>
-							<div class="mr--project-intro">{{project.intro}}</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-
-		</article>
+		<footer>
+			<div class="mr--email"><a href="mailto:mr@marcelray.com?subject=Hello!">Why not say hello?</a></div>
+			<div class="mr--copyright">&copy2021 Marcel Ray</div>
+		</footer>
 
 	</div>
 
