@@ -1,0 +1,152 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed|Droid+Serif:400,400italic);
+@import 'reset.css';
+@import 'mr-lib';
+@import 'mixins';
+// @import 'styles';
+
+// Fonts
+@font-titles: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Segoe UI', sans-serif;
+@font-copy: 'Merriweather', 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
+
+@link-color: #09c;
+@link-color-hover: lighten(@link-color,10);
+
+body {
+    background: #f3f3f3;
+    font: 76%/12pt @font-copy;
+}
+
+#mr--app {
+
+	* { 
+		color: #000;
+		font-family: @font-copy;
+		font-size: .9rem;
+		line-height: 175%;
+		text-rendering: optimizeLegibility;
+	}
+	a {
+		color: @link-color;
+		text-decoration: none;
+	}
+	a:hover {
+		color: @link-color-hover;
+		text-decoration: underline;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		font-family: @font-titles;
+		letter-spacing: -.03rem;
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+	
+		a {
+			font-family: @font-titles;
+		}
+	}
+
+	.mr--resume {
+
+		background: #fff;
+		border: 1px solid #f9f9f9;
+		width: 8.5in;
+		padding: 9.6153846154%;
+		margin: 1.9230769231%;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.03);
+		
+		> .mr--header {
+			padding: 0;
+			display: block;
+
+			h1 {
+				font-size: 1.6rem;
+				font-family: @font-titles;
+			}
+		}
+		
+		> .mr--section-intro {
+			max-width: 40rem;
+			font-size: 1rem;
+			color: #666;
+		}
+
+		.mr--section-experience {
+			width: 60%;
+			float: left;
+		}
+
+		> .mr--aside {
+			float: right;
+			width: 32%;
+			padding-left: 1.5rem;
+			margin-left: 1rem;
+			border-left: 1px solid #ccc;
+		}
+
+		> .mr--section , 
+		> .mr--aside > .mr--section {
+			margin-top: 2rem;
+
+			h2 {
+				text-transform: uppercase;
+				color: #999;
+				margin-bottom: .7rem;
+			}
+
+			.mr--item {
+				margin-bottom: .9rem;
+				
+				.mr--title {
+					font-size: 1rem;
+				}
+				.mr--title, .mr--item-details {
+					margin-bottom: .1rem;
+				}
+
+				.mr--item-details {
+					display: flex;
+					flex-direction: row;
+					gap: 1rem;
+
+					.mr--item-detail, .mr--item-detail a {
+						font-family: @font-titles;
+						font-size: .9rem;
+					}
+					.mr--item-detail {
+						color: #999;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+
+@media print {
+    @page {
+        margin: .7in
+	}
+
+    html,
+    body,
+    #mr--app,
+	#mr--app>article ,
+	.mr--content {
+		background: none !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: none !important;
+	}
+	.mr--resume {
+		margin: 0 auto !important;
+		box-shadow: none !important;
+	}
+	.mr--print--page-break {
+        content: '';
+        display: block !important;
+        page-break-before: always !important;
+    }
+}
