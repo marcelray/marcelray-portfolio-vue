@@ -8,9 +8,37 @@
 	overflow: hidden !important;
 }
 
+@media screen {
+    .mr--print-only, .mr--screen-exclude {
+        display: none !important
+    }
+}
+
+@media print {
+    .mr--print-exclude, .mr--screen-only {
+        display: none !important
+    }
+}
+
 /* MIXINS */
 .responsive(@maxWidth; @rules) {
     @media only screen and (max-width: @maxWidth) {
         @rules();
     }
+}
+.center-h {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.center-v {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.center-hv {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
 }
