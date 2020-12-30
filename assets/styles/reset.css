@@ -33,3 +33,5 @@ button{width:auto;overflow:visible}
 .clearfix:after{clear:both}
 .clearfix{zoom:1}
 input[type=radio],.ie6 input{vertical-align:text-bottom}
+
+*:focus { outline: none; }
