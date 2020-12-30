@@ -1,5 +1,10 @@
-@import "mr-lib";
-@import "mixins";
+@import 'reset.css';
+@import 'mr-lib';
+@import 'mixins';
+
+// Fonts
+@font-titles: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Segoe UI', sans-serif;
+@font-copy: 'Merriweather', 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
 
 // Links
 @link-color: #8e075e;
@@ -54,7 +59,7 @@ body, html {
 
 	* { 
 		color: #333;
-		font-family: 'Merriweather', serif;
+		font-family: @font-copy;
 		font-size: 1rem;
 		line-height: 175%;
 		text-rendering: optimizeLegibility;
@@ -78,7 +83,7 @@ body, html {
 		background: @button-background-fade;
 		border: none;
 		color: #fff;
-		font-family: 'Open Sans', sans-serif;
+		font-family: @font-titles;
 		letter-spacing: -.03rem;
 		padding: .5rem 1rem;
 		font-size: 1rem;
@@ -95,14 +100,14 @@ body, html {
 	}
 	
 	h1,h2,h3,h4,h5,h6 {
-		font-family: 'Open Sans', sans-serif;
+		font-family: @font-titles;
 		letter-spacing: -.03rem;
 		margin: 0;
 		padding: 0;
 		font-weight: normal;
 	
 		a {
-			font-family: 'Open Sans', sans-serif;
+			font-family: @font-titles;
 		}
 	}
 
@@ -144,7 +149,7 @@ body, html {
 			.mr--nav-global {
 				a {
 					display: inline-block;
-					font-family: 'Open Sans', sans-serif;
+					font-family: @font-titles;
 					margin-left: 2rem;
 					&:first-child {
 						margin-left: 0;
@@ -154,19 +159,22 @@ body, html {
 		}
 	
 		> .mr--intro {
-			font-size: 1.2rem;
-
 			padding: 2rem 2rem 4rem;
-			
-			> .mr--content {
-				max-width: 40rem;
-			}
-	
+
 			// responsive
 			.responsive(@break-sm, {
-				font-size: 1.1rem;
 				padding: 1rem .6rem 2rem;
 			});
+			
+			> .mr--content {
+				font-size: 1.5rem;
+				max-width: 40rem;
+
+				// responsive
+				.responsive(@break-sm, {
+					font-size: 1.3rem;
+				});
+			}
 		}
 
 		> .mr--group {
@@ -234,7 +242,7 @@ body, html {
 				}
 				h2 a {
 					color: #fff;
-					font-family: 'Open Sans', sans-serif;
+					font-family: @font-titles;
 					line-height: 150%;
 				}
 
@@ -467,15 +475,19 @@ body, html {
 
 	.mr--footer-main {
 		display: block;
-		margin: 6rem auto 2rem;
+		margin: 6rem auto 0;
 		text-align: center;
+
+		* {
+			font-family: @font-titles;
+		}
 	
 		.mr--email {
 			margin-bottom: 1rem;
 		}
 	
 		.mr--copyright {
-			color: #ccc;
+			color: #999;
 		}
 	}
 
