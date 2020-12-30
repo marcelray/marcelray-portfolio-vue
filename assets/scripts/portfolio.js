@@ -40,6 +40,8 @@ const app = new Vue({
 		showProjectDetails: function(project) {
 			this.currentProject = project;
 			$('body,html').addClass('mr--no-scroll');
+			// Re-show horizontal scroll indicator
+			$(document).find('.mr--scroll-arrow-right').show();
 		},
 		hideProjectDetails: function() {
 			location.hash = 'home';
@@ -76,6 +78,11 @@ const app = new Vue({
 			} else {
 				this.hideProjectDetails();
 			}
+		},
+		onMediaScroll: function(event) {
+			// Hide horizontal scroll arrow
+			// TODO: use a more specific selector
+			$(document).find('.mr--scroll-arrow-right').hide();
 		}
 	},
 	computed: {

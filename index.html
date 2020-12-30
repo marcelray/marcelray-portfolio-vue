@@ -90,6 +90,7 @@
 							></div>
 						<ul 
 							class="mr--project-media-items" 
+							v-on:scroll="onMediaScroll()"
 							v-bind:class="{ 'mr--media-single': currentProject.media.length === 1 }"
 							>
 							<li class="mr--media-container" v-for="media in currentProjectVideos">
