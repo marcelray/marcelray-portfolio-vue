@@ -48,10 +48,30 @@ const app = new Vue({
 			this.currentProject = null;
 			$('body,html').removeClass('mr--no-scroll');
 		},
+		getProjectById: function(id) {
+			// TODO: Optimize this
+			const matches = this.projects.filter( item => {
+				return item.id === id;
+			});
+			if ( matches.length > 0 ) {
+				return matches[0];
+			} else {
+				return null;
+			}
+		},
 		getGroupProjects: function(group) {
 			return this.projects.filter(item=>{
 				return group.categories.indexOf( item.category ) >= 0;
 			});
+		},
+		getProjectMedia: function(project, type) {
+			if ( !type ) {
+				return project.media;
+			} else {
+				return this.currentProject.media.filter(item => {
+					return item.type === type;
+				});
+			}
 		},
 		onProjectDataLoaded: function(json) {
 			// console.log(json);
@@ -68,13 +88,10 @@ const app = new Vue({
 		},
 		// Handle hash changes (browser back, deep link, etc.)
 		onHashChange: function() {
-			const projectId = location.hash.substr(1);
-			// TODO: Optimize this
-			const matchingProjects = this.projects.filter( item => {
-				return item.id === projectId;
-			});
-			if ( matchingProjects.length === 1 ) {
-				this.showProjectDetails( matchingProjects[0] );
+			const id = location.hash.substr(1);
+			const project = this.getProjectById(id);
+			if ( project ) {
+				this.showProjectDetails( project );
 			} else {
 				this.hideProjectDetails();
 			}
@@ -83,21 +100,16 @@ const app = new Vue({
 			// Hide horizontal scroll arrow
 			// TODO: use a more specific selector
 			$(document).find('.mr--scroll-arrow-right').hide();
-		}
+		},
 	},
 	computed: {
-		currentProjectVideos: function() {
+		getCurrentProjectMedia: function(type = 'image') {
 			return this.currentProject.media.filter(item => {
-				return item.type === "video";
-			});
-		},
-		currentProjectImages: function() {
-			return this.currentProject.media.filter(item => {
-				return item.type === "image";
+				return item.type === type;
 			});
 		}
 	}
-})
+});
 
 // Google Analytics
 var _gaq = _gaq || [];
