@@ -42,7 +42,7 @@
 			"intro": "Invent new ways for humans to interact with their physical and digital worlds." ,
 			"description": "<p>Defined, prototyped, and tested new digital and physical interactions and experiences for the future of virtual reality and augmented reality. Prototypes and demos were critical for senior executive leadership to evaluate the potential of radically new input/output paradigms.</p><p>More details coming soon.</p>",
 			"roles": "Hardware and AR/VR prototyping, executive demo development, interaction design",
-			"colophon": "Unity 3D, Unreal Engine, Oculus Rift, Microsoft Hololens, Arduino, Raspberry Pi, Node.js, socket messaging",
+			"colophon": "Unity 3D (C#), Unreal Engine (BluePrints), Oculus Rift, Microsoft Hololens, Arduino, Raspberry Pi, Node.js, Vue.js, socket messaging",
 			"tags": [],
 			"thumbnail": "thumb.jpg" ,
 			"media": [
@@ -66,9 +66,9 @@
 			"client": "Microsoft Office Education",
 			"date": "2017-09-01",
 			"intro": "Empower students and educators to visualize and analyze their world in Excel." ,
-			"description": "<p>I executed a major code migration and UI redesign for a Microsoft Excel add-in utilized by STEM educators and hobbyists to display real-time data from Arduino-based microcontrollers in Excel.</p><p>I quickly familiarized myself with the Visual Studio Tools for Office to upgrade the existing VB prototype to a production-ready, shippable C# product. In this process, I also oversaw the UX/UI design track to prepare the add-in for wider release. My efforts yielded a vastly improved user experience, greater reliability and a more robust feature-set.</p><p>I further supported, built and prototyped Arduino-based projects targeted toward middle school students. My “whisker” speed sensor design was used in an educational Hot Wheels physics project in partnership with Mattel.</p>",
+			"description": "<p>I executed a major code migration and UI redesign for the Microsoft Excel Data Streamer add-in utilized by STEM educators and hobbyists to display real-time data from Arduino-based microcontrollers in Excel.</p><p>I quickly familiarized myself with the Visual Studio Tools for Office to upgrade the existing Visual Basic prototype to a production-ready, shippable C# product. In this process, I also oversaw the UX/UI design track to prepare the add-in for wider release.</p><p>My efforts yielded a vastly improved user experience, greater reliability and a more robust feature-set. Much of this my UX is still in the production version of the Data Streamer add-in.</p><p>I further supported, built and prototyped Arduino-based projects targeted toward middle school students.</p>",
 			"roles": "C#/.NET development, UX design, Arduino/electronics prototyping",
-			"colophon": "Visual Studio, C#/.NET, Arduino, Serial/COM control, Visual Studio Tools for Office (VSTO)",
+			"colophon": "C#/.NET, Visual Studio, Arduino, Serial/COM control, Visual Studio Tools for Office (VSTO)",
 			"tags": [],
 			"thumbnail": "thumb.jpg" ,
 			"media": [
