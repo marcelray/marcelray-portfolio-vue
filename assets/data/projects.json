@@ -175,7 +175,8 @@
 					"url": "video.mp4",
 					"poster": "thumb.jpg"
 				}
-			]
+			],
+			"links":[]
 		},
 		{
 			"id": "msft-connectedcar",
@@ -208,7 +209,8 @@
 					"type": "image",
 					"url": "image-02.jpg"
 				}
-			]
+			],
+			"links":[]
 		},
 		{
 			"id": "bwco-yfiptm",
@@ -448,7 +450,8 @@
 					"url": "video.mp4",
 					"poster": "thumb.jpg"
 				}
-			]
+			],
+			"links":[]
 		},
 		{
 			"id": "bwco-furseals",
