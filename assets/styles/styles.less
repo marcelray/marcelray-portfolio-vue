@@ -231,7 +231,6 @@ body, html {
 			.mr--content {
 				pointer-events: none;
 				padding: 0;
-				z-index: 1000;
 				position: absolute;
 				bottom: .5rem;
 				left: .5rem;
@@ -312,10 +311,9 @@ body, html {
 					border-bottom: none;	
 				}
 				.mr--scroll-arrow-right {
-					animation-duration: 2s;
+					animation-duration: 3s;
 					animation-iteration-count: infinite;
 					animation-name: anim-scroll-arrow;
-					z-index: 100;
 				}
 				.mr--scroll-arrow-right:after {
 					content: '';
@@ -325,7 +323,6 @@ body, html {
 					top: -.6rem;
 					right: -.6rem;
 					transform: none;
-					z-index: 90;
 				}
 			
 				.mr--project-media-items {
@@ -502,11 +499,11 @@ body, html {
 			opacity: 0;
 			right: 5rem;
 		}
-		25% {
+		30% {
 			opacity: 1;
 			right: 3rem;
 		}
-		50% {
+		60% {
 			opacity: 0;
 			right: 1rem;
 		}
@@ -533,4 +530,11 @@ body, html {
 		text-align: center;
 		margin-left: -.5rem;
 	}
+}
+
+.project-enter-active, .project-leave-active {
+	transition: opacity .3s ease-out;
+}
+.project-enter, .project-leave-to /* .fade-leave-active below version 2.1.8 */ {
+	opacity: 0;
 }

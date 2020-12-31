@@ -1,45 +1,23 @@
-document.addEventListener("DOMContentLoaded", () => app.start());
 window.addEventListener('hashchange', () => app.onHashChange(), false);
-
-class Project {
-	id = ""
-	category = ""
-	colophone = ""
-	date = "2000-01-01"
-	description = ""
-	display = false
-	media = []
-	links = []
-	responsibilities = ""
-	tags = []
-	title = "test"
-	color = "#ff00ff"
-	imageUrl = "https://source.unsplash.com/random"
-	client = "marcelray"
-
-	static getFromJson(json) {
-		let project = new Project();
-		for (let prop in json) {
-			project[prop] = json[prop];
-		}
-		return project;
-	}
-}
 
 const app = new Vue({
 	el: '#mr--app',
 	data: {
+		show: true,
 		projects: [],
 		projectGroups: [],
 		currentProject: null,
 	},
+	mounted: function() {
+		fetch('assets/data/projects.json')
+			.then(response => response.json())
+			.then((json) => this.onProjectDataLoaded(json));
+	},
 	methods: {
-		start: function() {
-			fetch('assets/data/projects.json').then(response => response.json()).then((json) => this.onProjectDataLoaded(json));
-		},
 		showProjectDetails: function(project) {
 			this.currentProject = project;
-			$('body,html').addClass('mr--no-scroll');
+			// HACK : Prevent scrolling on body while modal is open
+			$('body').css('top', -(document.documentElement.scrollTop) + 'px').addClass('mr--no-scroll');
 			// Re-show horizontal scroll indicator
 			$(document).find('.mr--scroll-arrow-right').show();
 		},
@@ -74,14 +52,10 @@ const app = new Vue({
 			}
 		},
 		onProjectDataLoaded: function(json) {
-			// console.log(json);
-			json.projects.forEach((item, index) => {
-				this.projects.push(Project.getFromJson(item));
-			})
-			json.groupings.forEach((item, index) => {
-				this.projectGroups.push(item);
-			})
+			this.projects = json.projects;
+			this.projectGroups = json.groupings;
 		
+			// Navigate to project if hash is present
 			if ( location.hash.length > 0 ) {
 				this.onHashChange();
 			}
