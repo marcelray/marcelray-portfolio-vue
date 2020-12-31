@@ -1,5 +1,3 @@
-window.addEventListener('hashchange', () => app.onHashChange(), false);
-
 const app = new Vue({
 	el: '#mr--app',
 	data: {
@@ -8,42 +6,51 @@ const app = new Vue({
 		projectGroups: [],
 		currentProject: null,
 	},
-	mounted: function() {
-		fetch('assets/data/projects.json')
-			.then(response => response.json())
-			.then((json) => this.onProjectDataLoaded(json));
+	mounted: function () {
+		this.getProjectData();
+		this.initView();
 	},
 	methods: {
-		showProjectDetails: function(project) {
+		getProjectData: function () {
+			fetch('assets/data/projects.json')
+				.then(response => response.json())
+				.then((json) => this.onProjectDataLoaded(json));
+		},
+		initView: function () {
+			// Listen for hash changes
+			window.addEventListener('hashchange', () => this.onHashChange(), false);
+		},
+		showProjectDetails: function (project) {
 			this.currentProject = project;
 			// HACK : Prevent scrolling on body while modal is open
-			$('body').css('top', -(document.documentElement.scrollTop) + 'px').addClass('mr--no-scroll');
+			mrlib.addClass('body','mr--no-scroll');
+			mrlib.css('body','top', -(document.documentElement.scrollTop) + 'px');
 			// Re-show horizontal scroll indicator
-			$(document).find('.mr--scroll-arrow-right').show();
+			mrlib.show('.mr--scroll-arrow-right');
 		},
-		hideProjectDetails: function() {
+		hideProjectDetails: function () {
 			location.hash = 'home';
 			this.currentProject = null;
-			$('body,html').removeClass('mr--no-scroll');
+			mrlib.removeClass('body','mr--no-scroll');
 		},
-		getProjectById: function(id) {
+		getProjectById: function (id) {
 			// TODO: Optimize this
-			const matches = this.projects.filter( item => {
+			const matches = this.projects.filter(item => {
 				return item.id === id;
 			});
-			if ( matches.length > 0 ) {
+			if (matches.length > 0) {
 				return matches[0];
 			} else {
 				return null;
 			}
 		},
-		getGroupProjects: function(group) {
-			return this.projects.filter(item=>{
-				return group.categories.indexOf( item.category ) >= 0;
+		getGroupProjects: function (group) {
+			return this.projects.filter(item => {
+				return group.categories.indexOf(item.category) >= 0;
 			});
 		},
-		getProjectMedia: function(project, type) {
-			if ( !type ) {
+		getProjectMedia: function (project, type) {
+			if (!type) {
 				return project.media;
 			} else {
 				return this.currentProject.media.filter(item => {
@@ -51,33 +58,33 @@ const app = new Vue({
 				});
 			}
 		},
-		onProjectDataLoaded: function(json) {
+		onProjectDataLoaded: function (json) {
 			this.projects = json.projects;
 			this.projectGroups = json.groupings;
-		
+
 			// Navigate to project if hash is present
-			if ( location.hash.length > 0 ) {
+			if (location.hash.length > 0) {
 				this.onHashChange();
 			}
 		},
 		// Handle hash changes (browser back, deep link, etc.)
-		onHashChange: function() {
+		onHashChange: function () {
 			const id = location.hash.substr(1);
 			const project = this.getProjectById(id);
-			if ( project ) {
-				this.showProjectDetails( project );
+			if (project) {
+				this.showProjectDetails(project);
 			} else {
 				this.hideProjectDetails();
 			}
 		},
-		onMediaScroll: function(event) {
+		onMediaScroll: function (event) {
 			// Hide horizontal scroll arrow
 			// TODO: use a more specific selector
-			$(document).find('.mr--scroll-arrow-right').hide();
+			mrlib.hide('.mr--scroll-arrow-right');
 		},
 	},
 	computed: {
-		getCurrentProjectMedia: function(type = 'image') {
+		getCurrentProjectMedia: function (type = 'image') {
 			return this.currentProject.media.filter(item => {
 				return item.type === type;
 			});
@@ -89,8 +96,7 @@ const app = new Vue({
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-22942940-1']);
 _gaq.push(['_trackPageview']);
-(function()
-{
+(function () {
 	var ga = document.createElement('script');
 	ga.type = 'text/javascript';
 	ga.async = true;

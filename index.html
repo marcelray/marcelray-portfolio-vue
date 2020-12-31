@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +22,6 @@
 
 	<script src="//cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/gsap@3.5.1/dist/gsap.min.js"></script>
-	<script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 	<script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
 
 </head>
@@ -31,11 +31,11 @@
 	<div id="mr--app" :class="{ 'mr--modal-open': currentProject }">
 
 		<div class="mr--content">
-				
+
 			<div class="mr--header">
 
 				<div class="mr--header-group">
-					<h1>Marcel Ray</h1>	
+					<h1>Marcel Ray</h1>
 				</div>
 
 				<nav class="mr--nav-global">
@@ -43,28 +43,25 @@
 					<a href="assets/downloads/marcelray-resume.pdf" target="_blank">Résumé</a>
 					<a href="mailto:mr@marcelray.com?subject=Hello!">Email</a>
 				</nav>
-					
+
 			</div>
-				
+
 			<div class="mr--intro">
 				<div class="mr--content">I am a design-minded technologist focused on ideating, prototyping, and developing innovative experiences that connect physical and digital worlds.</div>
 			</div>
 
 			<div class="mr--group" v-for="projectGroup in projectGroups">
 				<ul class="mr--projects">
-					<li 
-						class="mr--project" 
-						v-for="project in getGroupProjects(projectGroup)" 
-						v-if="project.display"
-						>
+					<li class="mr--project" v-for="project in getGroupProjects(projectGroup)" v-if="project.display">
 						<div class="mr--project-thumbnail">
 							<a :href="'#' + project.id">
 								<img
 									:alt="project.title" 
 									:src="'http://marcelray.com/utils/slir/?w=600&c=10x7&i=/assets/projects/'+project.id+'/'+project.thumbnail" 
+									draggable="false"
 									/>
 								</a>
-							</div>
+						</div>
 						<div class="mr--content">
 							<h2><a :href="'#' + project.id" @click="showProjectDetails(project)">{{ project.title }}</a></h2>
 							<div class="mr--project-intro">{{project.intro}}</div>
@@ -77,92 +74,88 @@
 
 		<transition name="project" mode="out-in">
 			<div class="mr--modal-container" v-if="currentProject">
-				
+
 				<div class="mr--modal-screen" @click="hideProjectDetails()"></div>
-				
-					<div class="mr--project-detail mr--modal" v-if="currentProject">
-						
-						<button class="mr--close-button" @click="hideProjectDetails()">&times;</button>
-						<div class="mr--project-loadIndicator" class="loadIndicator" style="display: none;"></div>
-						
-						<div class="mr--content">
-								
-							<div class="mr--project-media">
-								<div 
-									class="mr--scroll-arrow-right" 
-									v-if="currentProject.media.length > 1"
-									></div>
-								<ul 
-									class="mr--project-media-items" 
-									@scroll="onMediaScroll()"
-									:class="{ 'mr--media-single': currentProject.media.length === 1 }"
-									>
-									<li class="mr--media-container" v-for="media in getProjectMedia(currentProject,'video')">
-										<video 
-											height="100%"
-											controlsList="nodownload" 
-											controls autostart playsinline autoplay
-											:poster="'/assets/projects/'+currentProject.id+'/'+media.poster">
-											<source :src="'http://marcelray.com/assets/projects/'+currentProject.id+'/'+media.url" type="video/mp4" />
-										</video></li>
-									<li class="mr--media-container" v-for="media in getProjectMedia(currentProject,'image')">
-										<img  
-											:alt="currentProject.title" 
-											:src="'http://marcelray.com/utils/slir/?h=300&c=16x9&i=/assets/projects/'+currentProject.id+'/'+media.url"
-											/>
+
+				<div class="mr--project-detail mr--modal" v-if="currentProject">
+
+					<button class="mr--close-button" @click="hideProjectDetails()">&times;</button>
+					<div class="mr--project-loadIndicator" class="loadIndicator" style="display: none;"></div>
+
+					<div class="mr--content">
+
+						<div class="mr--project-media">
+							<div class="mr--scroll-arrow-right" v-if="currentProject.media.length > 1"></div>
+							<ul class="mr--project-media-items" @scroll="onMediaScroll()" :class="{ 'mr--media-single': currentProject.media.length === 1 }">
+								<li class="mr--media-container" v-for="media in getProjectMedia(currentProject,'video')">
+									<video 
+										height="100%" 
+										controlsList="nodownload" 
+										controls autostart playsinline autoplay 
+										>
+										<!-- :poster="'/assets/projects/'+currentProject.id+'/'+media.poster" -->
+										<source :src="'http://marcelray.com/assets/projects/'+currentProject.id+'/'+media.url" type="video/mp4" />
+									</video></li>
+								<li class="mr--media-container" v-for="media in getProjectMedia(currentProject,'image')">
+									<img
+										:alt="currentProject.title"
+										:src="'http://marcelray.com/utils/slir/?h=300&c=16x9&i=/assets/projects/'+currentProject.id+'/'+media.url"
+										draggable="false"
+										/>
 									</li>
+							</ul>
+						</div>
+
+						<div class="mr--header">
+							<h1 class="mr--project-title" v-html="currentProject.title"></h1>
+							<div class="mr--project-intro" v-html="currentProject.intro"></div>
+						</div>
+
+						<div class="mr--project-details">
+
+							<div class="mr--project-detail-category">
+								<h2 class="mr--title">Company/Client</h2>
+								<div class="mr--content" v-html="currentProject.client"></div>
+							</div>
+
+							<div class="mr--project-detail-category">
+								<h2 class="mr--title">Roles</h2>
+								<div class="mr--content" v-html="currentProject.roles"></div>
+							</div>
+
+							<div class="mr--project-detail-category">
+								<h2 class="mr--title">Project Brief</h2>
+								<div class="mr--content" v-html="currentProject.description"></div>
+							</div>
+
+							<div class="mr--project-detail-category" v-if="currentProject.colophon">
+								<h2 class="mr--title">Colophon</h2>
+								<div class="mr--content" v-html="currentProject.colophon"></div>
+							</div>
+
+							<div class="mr--project-detail-category" v-if="currentProject.links.length > 0">
+								<h2 class="mr--title">More Info</h2>
+								<ul>
+									<li v-for="link in currentProject.links">
+										<a :href="link.url" target="_blank" v-html="link.title"></a>
+									</li>
+									<li></li>
 								</ul>
-							</div>
-
-							<div class="mr--header">
-								<h1 class="mr--project-title" v-html="currentProject.title"></h1>
-								<div class="mr--project-intro" v-html="currentProject.intro"></div>
-							</div>
-
-							<div class="mr--project-details">
-
-								<div class="mr--project-detail-category">
-									<h2 class="mr--title">Company/Client</h2>
-									<div class="mr--content" v-html="currentProject.client"></div>
-								</div>
-
-								<div class="mr--project-detail-category">
-									<h2 class="mr--title">Roles</h2>
-									<div class="mr--content" v-html="currentProject.roles"></div>
-								</div>
-
-								<div class="mr--project-detail-category">
-									<h2 class="mr--title">Project Brief</h2>
-									<div class="mr--content" v-html="currentProject.description"></div>
-								</div>
-
-								<div class="mr--project-detail-category" v-if="currentProject.colophon">
-									<h2 class="mr--title">Colophon</h2>
-									<div class="mr--content" v-html="currentProject.colophon"></div>
-								</div>
-
-								<div class="mr--project-detail-category" v-if="currentProject.links.length > 0">
-									<h2 class="mr--title">More Info</h2>
-									<ul>
-										<li v-for="link in currentProject.links">
-											<a :href="link.url" target="_blank" v-html="link.title"></a>
-										</li>
-										<li></li>
-									</ul>
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</transition>
+			</div>
+		</transition>
 
-		<div class="mr--footer-main"> 
+		<div class="mr--footer-main">
 			<div class="mr--email">Thanks for visiting! <a href="mailto:mr@marcelray.com?subject=Hello!">Why not say hello?</a></div>
 			<!-- <div class="mr--copyright">Handmade with love and <a href="https://vuejs.org">Vue.js</a></div> -->
 		</div>
 
 	</div>
 
+	<script src="assets/scripts/mr-lib.js"></script>
 	<script src="assets/scripts/portfolio.js"></script>
 
 </body>

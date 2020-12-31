@@ -15,13 +15,13 @@
 
 // Buttons
 @button-background: linear-gradient(333deg, #123438 0%, #5a1a4e 82%, #8e075e 100%);
-@button-background-light: linear-gradient(333deg, hsl(186, 51%, 35%) 0%, hsl(311, 55%, 43%) 82%, hsl(321, 91%, 49%) 100%);
+@button-background-light: linear-gradient(333deg, hsl(186, 51%, 35%) 0%, hsl(311, 55%, 43%) 82%, hsl(321, 37%, 48%) 100%);
 @button-background-fade: linear-gradient(333deg, #123438ee 0%, #5a1a4eee 82%, #8e075eee 100%);
 
 // Backgrounds
 @bg-color-main: #f3f3f3;
 @bg-color-image: #333;
-@bg-color-modal-screen: #00000066;
+@bg-color-modal-screen: #00000099;
 
 // Thumbnails
 @thumb-border: #fff;
@@ -40,12 +40,18 @@
 @z-modal-content: 920;
 @z-modal-close-button: 930;
 
-body, html {
+
+html {
+	background: #000;
+}
+body {
 	background: @bg-color-main;
 	
 	font-size: 16px;
 	padding-bottom: 2rem;
 	line-height: 170%;
+
+	width: 100vw;
 
 	.responsive(@break-sm, {
 		font-size: 15px;
@@ -63,6 +69,10 @@ body, html {
 		font-size: 1rem;
 		line-height: 175%;
 		text-rendering: optimizeLegibility;
+
+		// Default transitions
+		transition-timing-function: ease-out;
+		transition-duration: .2s;
 	}
 	
 	a {
@@ -112,12 +122,11 @@ body, html {
 	}
 
 	&.mr--modal-open > .mr--content {
-		filter: blur(.1rem);
+		// filter: blur(.1rem);
 	}
 
 	// responsive
 	.responsive(@break-sm, {
-		// text-align: center;
 		padding: 0 1rem 1rem;
 	});
 
@@ -214,15 +223,18 @@ body, html {
 		.mr--project {
 			position: relative;
 			box-shadow: #999999cc 0 0.1rem 0.2rem 0rem;
+			transition-property: all;
+
+			&:hover {
+				transform: scale(1.05);
+			}
 
 			.mr--project-thumbnail
 			{
 				background: @bg-color-image;
-
-				filter: saturate(.7) brightness(.9);
-
-				transition: all 1s;
-
+				filter: saturate(.6) brightness(.8);
+				transition-property: all;
+				
 				&:hover {
 					filter: brightness(1) saturate(1);
 				}
@@ -234,13 +246,12 @@ body, html {
 				position: absolute;
 				bottom: .5rem;
 				left: .5rem;
-				transition: all 1s;
 				
 				h2 {
 					background: @button-background-fade;
 					white-space: nowrap;
 					display: inline-block;
-					padding: .6rem 1.2rem;
+					padding: .5rem 1.2rem .55rem;
 					font-size: 1rem;
 					line-height: 150%;
 
@@ -430,6 +441,7 @@ body, html {
 
 		.mr--modal-screen {
 			background: @bg-color-modal-screen;
+			// backdrop-filter: blur(.2rem);
 			position: absolute;
 			left: 0;
 			right: 0;
@@ -493,7 +505,15 @@ body, html {
 		}
 	}
 
-	// ANIMATIONS
+	// ANIMATIONS / TRANSITIONS
+
+	.project-enter-active, .project-leave-active {
+		transition-property: opacity;
+	}
+	.project-enter, .project-leave-to /* .fade-leave-active below version 2.1.8 */ {
+		opacity: 0;
+	}
+
 	@keyframes anim-scroll-arrow {
 		0% {
 			opacity: 0;
@@ -530,11 +550,4 @@ body, html {
 		text-align: center;
 		margin-left: -.5rem;
 	}
-}
-
-.project-enter-active, .project-leave-active {
-	transition: opacity .3s ease-out;
-}
-.project-enter, .project-leave-to /* .fade-leave-active below version 2.1.8 */ {
-	opacity: 0;
 }
