@@ -57,7 +57,7 @@
 							<a :href="'#' + project.id">
 								<img
 									:alt="project.title" 
-									:src="'http://marcelray.com/utils/slir/?w=600&c=10x7&i=/assets/projects/'+project.id+'/'+project.thumbnail" 
+									:src="'http://marcelray.com/utils/slir/?w=600&c=10x7&q=90&i=/assets/projects/'+project.id+'/'+project.thumbnail" 
 									draggable="false"
 									/>
 								</a>
@@ -99,7 +99,7 @@
 								<li class="mr--media-container" v-for="media in getProjectMedia(currentProject,'image')">
 									<img
 										:alt="currentProject.title"
-										:src="'http://marcelray.com/utils/slir/?h=300&c=16x9&i=/assets/projects/'+currentProject.id+'/'+media.url"
+										:src="'http://marcelray.com/utils/slir/?h=300&c=16x9&q=90&i=/assets/projects/'+currentProject.id+'/'+media.url"
 										draggable="false"
 										/>
 									</li>
