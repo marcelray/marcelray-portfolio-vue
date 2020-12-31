@@ -14,7 +14,7 @@
 			"client": "National Park Service",
 			"date": "2020-03-01",
 			"intro": "Modernize how the public accesses a beloved national park’s backcountry." ,
-			"description": "<p>Modernized and improved internal and visitor-facing backcountry permitting processes, station visitor flows, and internal and public-facing web-based tools.</p><p>More details coming soon.</p>",
+			"description": "<p>Modernized and improved internal and visitor-facing backcountry permitting processes, ranger station visitor flows, and internal and public-facing web-based tools.</p><p>More details coming soon.</p>",
 			"roles": "Web and desktop front end development, UX and UI design, enclosure design, Linux system administration, project management",
 			"colophon": "jQuery, MySQL, Python, PHP, C#/.NET, WPF, Adobe Illustrator, Adobe InDesign",
 			"tags": [],
@@ -22,7 +22,7 @@
 			"media": [
 				{
 					"type": "image" ,
-					"url": "thumb.jpg"
+					"url": "image-01.jpg"
 				}
 			],
 			"links": [
@@ -66,7 +66,7 @@
 			"client": "Microsoft Office Education",
 			"date": "2017-09-01",
 			"intro": "Empower students and educators to visualize and analyze their world in Excel." ,
-			"description": "<p>I executed a major code migration and UI redesign for the Microsoft Excel Data Streamer add-in utilized by STEM educators and hobbyists to display real-time data from Arduino-based microcontrollers in Excel.</p><p>I quickly familiarized myself with the Visual Studio Tools for Office to upgrade the existing Visual Basic prototype to a production-ready, shippable C# product. In this process, I also oversaw the UX/UI design track to prepare the add-in for wider release.</p><p>My efforts yielded a vastly improved user experience, greater reliability and a more robust feature-set. Much of this my UX is still in the production version of the Data Streamer add-in.</p><p>I further supported, built and prototyped Arduino-based projects targeted toward middle school students.</p>",
+			"description": "<p>Executed a major code migration and UI redesign for the Microsoft Excel Data Streamer add-in utilized by STEM educators and hobbyists to display real-time data from Arduino-based microcontrollers in Excel.</p><p>Migrated an existing Visual Basic prototype to a production-ready, shippable C# product. Oversaw the UX/UI design track to prepare the add-in for wider release.</p><p>Further supported, built and prototyped Arduino-based projects targeted toward middle school students.</p>",
 			"roles": "C#/.NET development, UX design, Arduino/electronics prototyping",
 			"colophon": "C#/.NET, Visual Studio, Arduino, Serial/COM control, Visual Studio Tools for Office (VSTO)",
 			"tags": [],
@@ -104,7 +104,7 @@
 			"client": "Amazon",
 			"date": "2015-10-01",
 			"intro": "Simulate, design, and test a revolutionary check-out free retail store." ,
-			"description": "<p>I was a critical member of the product design team working to create Amazon&apos;s revolutionary, completely checkout-free retail shopping experience centered around the vision of &ldquo;Just Walk Out&rdquo;. I directed the prototyping and &ldquo;Wizard of Oz&rdquo; simulation efforts and proved them to be invaluable media for design exploration and building realistic, testable experiences that weren&apos;t yet technically possible. These simulations and prototypes were used by our design team and executive leadership to (in)validate experiences throughout the store&apos;s development.</p><p>In this role, I utilized an eclectic array of technologies to iteratively build and simulate these experiences, including: Wii Remotes, lighting controls, socket communication servers, and scores of Android tablets and phones running custom Cordova apps.</p>",
+			"description": "<p>Critical member of the product design team working to create Amazon&apos;s revolutionary, completely checkout-free retail shopping experience centered around the vision of &ldquo;Just Walk Out&rdquo;. Directed the prototyping and &ldquo;Wizard of Oz&rdquo; simulation efforts and proved them to be invaluable media for design exploration and building realistic, testable experiences that weren&apos;t yet technically possible. These simulations and prototypes were used by the design team and executive leadership to (in)validate experiences throughout the store&apos;s development.</p><p>Utilized an eclectic array of technologies to iteratively build and simulate these experiences, including: Wii Remotes, lighting controls, socket communication servers, and scores of Android tablets and phones running custom Cordova apps.</p>",
 			"roles": "Prototyping and usability testing direction, motion design direction, executive leadership presentations",
 			"colophon": "Cordova, TypeScript, AngularJS, Node.js, JavaScript, HTML5/CSS3",
 			"tags": [
@@ -298,7 +298,7 @@
 			"collaborator": "Belle &amp; Wissell",
 			"date": "2011-04-01",
 			"intro": "Give the power of personal story telling to Nirvana fans at Seattle’s coolest museum." ,
-			"description": "<p>Visitors to the MoPOP’s highly anticipated <em>Nirvana: Taking Punk to the Masses</em> exhibition can share their 90-second Nirvana \"confessional\" in a private booth featuring a touch screen interface and HD webcam. Upon submission, it is projected just outside the booth alongside other confessions and rare Nirvana footage in a mini-theater setting.</p><p>I built the recording interface and functionality while hiring and managing a subcontractor to build the theater playback interface. Recording was done using an HD capable USB webcam in Adobe’s Flash Media Live Encoder via the native process API in Adobe AIR. Communication between recording and playback machines was managed with socket messaging.</p>",
+			"description": "<p>Visitors to the MoPOP’s highly anticipated <em>Nirvana: Taking Punk to the Masses</em> exhibition can share their 90-second Nirvana \"confessional\" in a private booth featuring a touch screen interface and HD webcam. Upon submission, it is projected just outside the booth alongside other confessions and rare Nirvana footage in a mini-theater setting.</p><p>Built the recording interface and functionality while hiring and managing a subcontractor to build the theater playback interface. Recording was done using an HD capable USB webcam in Adobe’s Flash Media Live Encoder via the native process API in Adobe AIR. Communication between recording and playback machines was managed with socket messaging.</p>",
 			"roles": "Development lead, kiosk configuration, subcontractor management",
 			"colophon": "Flex 4, AIR, Cairngorm, HD video capture, .NET/C#",
 			"tags": [
