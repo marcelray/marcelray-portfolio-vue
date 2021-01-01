@@ -23,8 +23,8 @@ const app = new Vue({
 		showProjectDetails: function (project) {
 			this.currentProject = project;
 			// HACK : Prevent scrolling on body while modal is open
-			mrlib.addClass('body','mr--no-scroll');
-			mrlib.css('body','top', -(document.documentElement.scrollTop) + 'px');
+			mrlib.addClass('body', 'mr--no-scroll');
+			mrlib.css('body', 'top', -(document.documentElement.scrollTop) + 'px');
 			// Re-show horizontal scroll indicator
 			mrlib.show('.mr--scroll-arrow-right');
 			// Google Analytics
@@ -33,7 +33,7 @@ const app = new Vue({
 		hideProjectDetails: function () {
 			location.hash = 'home';
 			this.currentProject = null;
-			mrlib.removeClass('body','mr--no-scroll');
+			mrlib.removeClass('body', 'mr--no-scroll');
 			// Google Analytics
 			this.gaPageView('Home', 'index.html');
 		},
