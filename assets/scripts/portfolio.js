@@ -5,6 +5,7 @@ const app = new Vue({
 		projects: [],
 		projectGroups: [],
 		currentProject: null,
+		_scrollPosition: 0
 	},
 	mounted: function () {
 		this.getProjectData();
@@ -22,20 +23,26 @@ const app = new Vue({
 		},
 		showProjectDetails: function (project) {
 			this.currentProject = project;
-			// HACK : Prevent scrolling on body while modal is open
-			mrlib.addClass('body', 'mr--no-scroll');
-			mrlib.css('body', 'top', -(document.documentElement.scrollTop) + 'px');
+
 			// Re-show horizontal scroll indicator
 			mrlib.show('.mr--scroll-arrow-right');
 			// Google Analytics
 			this.gaPageView(project.name, 'index.html#' + project.id);
+
+			// HACK : Prevent scrolling on body while modal is open
+			this._scrollPosition = window.scrollY;
+			mrlib.addClass('body', 'mr--no-scroll');
+			mrlib.css('body', 'top', -this._scrollPosition + 'px');
 		},
 		hideProjectDetails: function () {
 			location.hash = 'home';
 			this.currentProject = null;
-			mrlib.removeClass('body', 'mr--no-scroll');
 			// Google Analytics
 			this.gaPageView('Home', 'index.html');
+			
+			// HACK : Return page to scroll position
+			mrlib.removeClass('body', 'mr--no-scroll');
+			window.scrollTo(0,this._scrollPosition);
 		},
 		getProjectById: function (id) {
 			// TODO: Optimize this
