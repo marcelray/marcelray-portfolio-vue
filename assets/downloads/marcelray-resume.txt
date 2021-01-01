@@ -1,0 +1,87 @@
+MARCEL RAY
+mr@marcelray.com
+www.marcelray.com
+
+Design technologist focused on helping creative teams quickly ideate, prototype, and test nascent products that connect physical and digital worlds.
+
+EXPERIENCE
+
+Technical & Design Consultant
+Nov 2007 – Present
+Currently modernizing North Cascades National Park's permitting processes and redesigning trailhead signage. Past organizations have included the National Audubon Society; Cesar Millan, The Dog Whisperer; WNET PBS NYC; Nickelodeon.
+
+Oculus Research 
+Design Technologist
+Jan 2018 – Jun 2019
+Defined, prototyped, and tested multi-modal interactions for the future of virtual and mixed realities. Built custom hardware prototypes, integrated engineering prototypes, and leveraged off-the-shelf AR/VR devices and hand tracking platforms. Developed higher fidelity experiential demos for internal symposiums and executive leadership review.
+
+Microsoft Hacking STEM Education 
+Design Developer
+Mar 2017 – Oct 2017
+Driving force behind a major C# code migration and UI redesign of the Microsoft Excel Data Streamer add-in used by STEM educators and students around the world to visualize real-time data from Arduino microcontrollers.
+
+Amazon Go Store 
+Senior Design Technologist
+Aug 2014 – Oct 2015
+Spearheaded the design technology program and spatial prototyping processes for Amazon's innovative physical retail concept centered around a checkout-free shopping experience.
+
+Microsoft Band, Connected Car 
+UX Prototyper
+Sept 2012 – Jul 2014
+Collaborated with researchers and designers on the design and implementation of visual and UI flow explorations for cutting-edge consumer products. Rapidly developed high fidelity, end-to-end prototypes which were critical for formal usability testing as well as presentations to senior-leadership and corporate partners.
+
+Belle & Wissell
+Technical Lead
+Jun 2010 – Aug 2012
+Technical direction and development of interactive exhibits and installations for nationally and internationally recognized museums and environments.
+
+Nintendo of America
+API Designer
+Mar 2009 – Dec 2009
+Designed the official Nintendo Wii Flash video API for content providers and partners—including the BBC–to easily support video playback on the Wii from other platforms.
+
+Smashing Ideas, Inc. 
+Interactive Developer
+Mar 2006 – Oct 2007
+
+Eastman Kodak 
+Camera Interface Developer
+Dec 2004 – Feb 2006
+
+Buck & Pulleyn
+Interactive Developer & Designer
+Aug 2004 – Dec 2004
+
+Element K
+Interactive Developer
+Oct 2003 – Jul 2004
+
+SKILLS + TOOLS
+
+JavaScript ES6, TypeScript
+Node.js
+Vue.js, React, Angular
+UX/UI Design
+CSS, LESS, SASS
+WebSockets, Serial
+Python, PHP
+Cordova/PhoneGap
+C#, .NET
+Unity 3D
+VR/MR/AR
+Arduino, Raspberry Pi
+Duct tape, super glue
+Wizardry
+
+ACCOLADES
+
+Amazon
+Highest Performance Rating
+May 2015
+
+EDUCATION
+
+Rochester Institute of Technology
+BS, New Media
+magna cum laude
+
