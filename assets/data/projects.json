@@ -26,10 +26,6 @@
 				}
 			],
 			"links": [
-				{
-					"url": "https://www.nps.gov/noca/planyourvisit/backcountry-availability.htm",
-					"title": "North Cascades Backcountry Availability"
-				}
 			]
 		},
 		{
@@ -40,7 +36,7 @@
 			"client": "Oculus Research (Facebook Reality Labs)",
 			"date": "2018-01-15",
 			"intro": "Invent new ways for humans to interact with their physical and digital worlds." ,
-			"description": "<p>Defined, prototyped, and tested new digital and physical interactions and experiences for the future of virtual reality and augmented reality. Prototypes and demos were critical for senior executive leadership to evaluate the potential of radically new input/output paradigms.</p><p>More details coming soon.</p>",
+			"description": "<p>Defined, prototyped, and tested new multi-modal interactions and experiences for the future of virtual reality and augmented reality. Prototypes and demos were critical for senior executive leadership to evaluate the potential of radically new input/output paradigms.</p><p>More details coming soon.</p>",
 			"roles": "Hardware and AR/VR prototyping, executive demo development, interaction design",
 			"colophon": "Unity 3D (C#), Unreal Engine (BluePrints), Oculus Rift, Microsoft Hololens, Arduino, Raspberry Pi, Node.js, Vue.js, socket messaging",
 			"tags": [],
@@ -103,7 +99,7 @@
 			"title": "Amazon Go Store",
 			"client": "Amazon",
 			"date": "2015-10-01",
-			"intro": "Simulate, design, and test a revolutionary check-out free retail store." ,
+			"intro": "Simulate, design, and test a checkout-free grocery store before it’s technically possible." ,
 			"description": "<p>Critical member of the product design team working to create Amazon&apos;s revolutionary, completely checkout-free retail shopping experience centered around the vision of &ldquo;Just Walk Out&rdquo;. Directed the prototyping and &ldquo;Wizard of Oz&rdquo; simulation efforts and proved them to be invaluable media for design exploration and building realistic, testable experiences that weren&apos;t yet technically possible. These simulations and prototypes were used by the design team and executive leadership to (in)validate experiences throughout the store&apos;s development.</p><p>Utilized an eclectic array of technologies to iteratively build and simulate these experiences, including: Wii Remotes, lighting controls, socket communication servers, and scores of Android tablets and phones running custom Cordova apps.</p>",
 			"roles": "Prototyping and usability testing direction, motion design direction, executive leadership presentations",
 			"colophon": "Cordova, TypeScript, AngularJS, Node.js, JavaScript, HTML5/CSS3",
@@ -354,7 +350,7 @@
 			"title": "Nintendo Wii API Design",
 			"client": "Nintendo of America",
 			"date": "2009-06-01",
-			"intro": "Provide video content partners an official API for streaming on the Wii." ,
+			"intro": "Provide official content partners an elegant API for streaming video on the Wii gaming console." ,
 			"description": "<p>First utilized by the BBC for their popular iPlayer, the Video On-Demand Framework (VODF) Flash Lite API enables official partners to build Wii Channels using ActionScript 2 and Flash. Utmost attention was paid to class simplicity and extensibility, including building a robust, AS3 inspired event model. All source was meticulously documented and beautifully formatted.</p>",
 			"roles": "Lead API design and development, formal documentation",
 			"colophon": "Flash Lite 3.1, ActionScript 2, ASDoc",
