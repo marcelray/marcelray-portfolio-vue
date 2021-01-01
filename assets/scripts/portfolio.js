@@ -27,11 +27,15 @@ const app = new Vue({
 			mrlib.css('body','top', -(document.documentElement.scrollTop) + 'px');
 			// Re-show horizontal scroll indicator
 			mrlib.show('.mr--scroll-arrow-right');
+			// Google Analytics
+			this.gaPageView(project.name, 'index.html#' + project.id);
 		},
 		hideProjectDetails: function () {
 			location.hash = 'home';
 			this.currentProject = null;
 			mrlib.removeClass('body','mr--no-scroll');
+			// Google Analytics
+			this.gaPageView('Home', 'index.html');
 		},
 		getProjectById: function (id) {
 			// TODO: Optimize this
@@ -56,6 +60,15 @@ const app = new Vue({
 				return this.currentProject.media.filter(item => {
 					return item.type === type;
 				});
+			}
+		},
+		gaPageView(title, location) {
+			try {
+				gtag('event', 'page_view', {
+					page_title: title,
+					page_location: location
+				});
+			} catch {
 			}
 		},
 		onProjectDataLoaded: function (json) {
@@ -91,16 +104,3 @@ const app = new Vue({
 		}
 	}
 });
-
-// Google Analytics
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-22942940-1']);
-_gaq.push(['_trackPageview']);
-(function () {
-	var ga = document.createElement('script');
-	ga.type = 'text/javascript';
-	ga.async = true;
-	ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(ga, s);
-})();
