@@ -265,10 +265,6 @@
 					"title": "Belle &amp; Wissell Project Page"
 				},
 				{
-					"url": "http://www.empmuseum.org/at-the-museum/current-exhibits/cant-look-away-the-lure-of-horror-film.aspx",
-					"title": "Can’t Look Away: The Lure of Horror in Film at EMP"
-				},
-				{
 					"url": "http://www.flickr.com/photos/empmuseum/sets/72157627782439260/",
 					"title": "Flickr Set"
 				}
@@ -321,10 +317,6 @@
 				{
 					"url": "http://www.bwco.info/work/nirvana-taking-punk-to-the-masses/",
 					"title": "Belle &amp; Wissell Project Page"
-				},
-				{
-					"url": "http://www.empmuseum.org/at-the-museum/current-exhibits/nirvana-taking-punk-to-the-masses.aspx",
-					"title": "Nirvana: Taking Punk to the Masses at EMP"
 				}
 			]
 		},
@@ -484,8 +476,8 @@
 			],
 			"links": [
 				{
-					"url": "http://www.seattleaquarium.org/page.aspx?pid=716",
-					"title": "Project details at the Seattle Aquarium’s website."
+					"url": "https://informal.jpl.nasa.gov/museum/CP4SMP/space-age-oceanography-exhibition-and-education",
+					"title": "Project overview at NASA"
 				}
 			]
 		}
