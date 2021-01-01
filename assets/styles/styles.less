@@ -139,23 +139,32 @@ body {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			align-items: baseline;
+			align-items: flex-start;
 
-			padding: 2rem 2rem;
+			padding: 2.3rem 2rem 1.8rem;
 	
 			// responsive
 			.responsive(@break-sm, {
 				display: block;
 				padding: 1rem .6rem;
 			});
-	
+
 			h1 {
-				font-size: 1.7rem;
-				font-weight: 600;
-				color: @link-color;
-				background: @button-background-light;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
+				display: none;
+			}
+			svg.name {
+				// background: #f0f; 
+				height: 2.3rem;
+				text {
+					font-family: @font-titles;
+					letter-spacing: -.03rem;
+					font-size: 1.7rem;
+					font-weight: 600;
+					color: @link-color;
+					background: @button-background-light;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+				}
 			}
 
 			.mr--nav-global {
