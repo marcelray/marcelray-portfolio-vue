@@ -14,7 +14,7 @@ Vue.component('mr-image', {
 	template: `
 	  <div class="mr--image" >
 		<div class="mr--loader" v-if="!loaded">
-		  <img class="spinner" src="assets/images/spinner.svg">
+		  <img class="spinner" src="/assets/images/spinner.svg">
 		</div>
 		<transition name="media">
 		  <img 

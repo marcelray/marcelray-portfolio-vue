@@ -365,19 +365,24 @@ body {
 					max-height: 370px;
 					
 					li {
-						// background: #ccc;
+						background: #111;
 						flex: none;
 						// padding: .5rem .5rem .5rem 0;
 						padding-right: .5rem;
+						width: 90%;
 						max-width: 90%;
 					}
 					li:last-of-type {
 						padding-right: 0;
 					}
+
+					.mr-image {
+						width: 100%;
+					}
 					
 
 					.mr--loader {
-						padding-bottom: 70%;
+						padding-bottom: 56.25%;
 						> .spinner {
 							width: 3rem;
 							height: 3rem;
@@ -387,17 +392,17 @@ body {
 					img, video {
 						display: block;
 						border: none;
+						width: 100%;
 						max-width: 100%;
 					}
 
 					&.mr--media-single {
+
 						display: block;
 						overflow: hidden;
-						.mr--loader {
-							padding-bottom: 56.25%;
-						}
 						li {
 							padding: 0;
+							width: 100%;
 							max-width: 100%;
 						}
 						img, video {
