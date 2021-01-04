@@ -11,6 +11,8 @@ const app = new Vue({
 		this.getProjectData();
 		this.initView();
 	},
+	directives: {
+	},
 	methods: {
 		getProjectData: function () {
 			fetch('assets/data/projects.json')
@@ -39,10 +41,10 @@ const app = new Vue({
 			this.currentProject = null;
 			// Google Analytics
 			this.gaPageView('Home', 'index.html');
-			
+
 			// HACK : Return page to scroll position
 			mrlib.removeClass('body', 'mr--no-scroll');
-			window.scrollTo(0,this._scrollPosition);
+			window.scrollTo(0, this._scrollPosition);
 		},
 		getProjectById: function (id) {
 			// TODO: Optimize this
@@ -102,6 +104,9 @@ const app = new Vue({
 			// TODO: use a more specific selector
 			mrlib.hide('.mr--scroll-arrow-right');
 		},
+		onImageLoad: function (image) {
+			image.loaded = true;
+		}
 	},
 	computed: {
 		getCurrentProjectMedia: function (type = 'image') {

@@ -34,6 +34,7 @@
 	<script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
 	
 	<script src="assets/scripts/mr-lib.js"></script>
+	<script defer src="assets/scripts/components.vue"></script>
 	<script defer src="assets/scripts/portfolio.js"></script>
 
 
@@ -68,20 +69,21 @@
 
 			<div class="mr--intro">
 				<div class="mr--content">Design technologist focused on helping creative teams
-					quickly ideate, prototype, and test nascent products that
+					quickly ideate, prototype, and test innovative experiences that
 					connect physical and digital worlds.</div>
 			</div>
 
 			<div class="mr--group" v-for="projectGroup in projectGroups">
 				<ul class="mr--projects">
 					<li class="mr--project" v-for="project in getGroupProjects(projectGroup)" v-if="project.display">
-						<div class="mr--project-thumbnail">
+						<div 
+							class="mr--project-thumbnail" 
+							>
 							<a :href="'#' + project.id">
-								<img
+								<mr-image
+									:src="'http://marcelray.com/utils/slir/?w=600&c=10x7&q=90&i=/assets/projects/'+project.id+'/'+project.thumbnail.url" 
 									:alt="project.title" 
-									:src="'http://marcelray.com/utils/slir/?w=600&c=10x7&q=90&i=/assets/projects/'+project.id+'/'+project.thumbnail" 
-									draggable="false"
-									/>
+									></mr-image>
 								</a>
 						</div>
 						<div class="mr--content">
@@ -107,6 +109,10 @@
 					<div class="mr--content">
 
 						<div class="mr--project-media">
+							<div class="mr--loader">
+								<div class="double-bounce1"></div>
+								<div class="double-bounce2"></div>
+							</div>
 							<div class="mr--scroll-arrow-right" v-if="currentProject.media.length > 1"></div>
 							<ul class="mr--project-media-items" @scroll="onMediaScroll()" :class="{ 'mr--media-single': currentProject.media.length === 1 }">
 								<li class="mr--media-container" v-for="media in getProjectMedia(currentProject,'video')">
@@ -119,11 +125,10 @@
 										<source :src="'http://marcelray.com/assets/projects/'+currentProject.id+'/'+media.url" type="video/mp4" />
 									</video></li>
 								<li class="mr--media-container" v-for="media in getProjectMedia(currentProject,'image')">
-									<img
+									<mr-image
+										:src="'http://marcelray.com/utils/slir/?h=400&c=16x9&q=90&i=/assets/projects/'+currentProject.id+'/'+media.url+'&random='+Math.random()"
 										:alt="currentProject.title"
-										:src="'http://marcelray.com/utils/slir/?h=300&c=16x9&q=90&i=/assets/projects/'+currentProject.id+'/'+media.url"
-										draggable="false"
-										/>
+										></mr-image>
 									</li>
 							</ul>
 						</div>
