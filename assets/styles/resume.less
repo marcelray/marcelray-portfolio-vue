@@ -27,9 +27,10 @@
 body {
     background: #f3f3f3;
 	color: #111;
-    font: 76%/12pt @font-titles;
+	font-family: @font-titles;
+	// font: 76%/12pt @font-titles;
 	line-height: 175%;
-	font-size: .85rem;
+	font-size: 9pt;
 	// letter-spacing: .01rem;
 }
 * { 
@@ -63,7 +64,7 @@ h1,h2,h3,h4,h5,h6 {
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.03);
 
 	.column {
-		padding: 1rem 0;
+		padding: 0 0 1rem;
 	}
 
 	.column-group {
@@ -105,7 +106,7 @@ h1,h2,h3,h4,h5,h6 {
 		// display: none;
 		font-family: @font-copy;
 		font-size: .9rem;
-		margin: 1.5rem 0 0;
+		margin: 1.5rem 0 .5rem;
 		line-height: 170%;
 		color: #666;
 	}
@@ -158,10 +159,10 @@ h1,h2,h3,h4,h5,h6 {
 	}
 
 	.column.primary .section h2 {
-		margin-bottom: 1rem;
+		margin-bottom: .5rem;
 	}
 	.column.secondary .section { 
-		margin-bottom: 1.2rem;
+		margin-bottom: 1.1rem;
 		h2 {
 			margin-bottom: .2rem;
 		}
@@ -181,10 +182,8 @@ h1,h2,h3,h4,h5,h6 {
 
 		li {
 			.organization, .organization a {
-				// color: #000;
 				color: @color-accent !important;
 				font-weight: 600;
-				// .fancy-pants;
 			}
 
 			.location,
@@ -194,8 +193,7 @@ h1,h2,h3,h4,h5,h6 {
 				font-size: .7rem;
 				text-transform: uppercase;
 				line-height: 170%;
-				// font-size: .8rem !important;
-				// display: inline-block;
+				margin: 0;
 			}
 			.location {
 				display: none;
@@ -207,15 +205,17 @@ h1,h2,h3,h4,h5,h6 {
 
 			> ol li {
 			
-				margin-bottom: 1.2rem;
+				margin-bottom: 1rem;
 				page-break-inside: avoid;
 
 				.organization, .role {
 					display: inline-block;
 					font-size: 1rem;
+					font-weight: 200;
 					line-height: 150%;
 				}
 				.organization {
+					font-weight: bold;
 					margin-right: 0;
 
 					.contract {
@@ -249,6 +249,11 @@ h1,h2,h3,h4,h5,h6 {
 				// height: 1rem;
 				color: #1c925f;
 			}
+		}
+
+		&.section-accolades,
+		&.section-education {
+			
 		}
 
 		&.section-education {
