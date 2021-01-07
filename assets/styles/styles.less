@@ -235,6 +235,10 @@ body {
 
 			&:hover {
 				transform: scale(1.05);
+
+				.responsive(@break-sm, { 
+					transform: none;
+				});
 			}
 
 			.mr--project-thumbnail
@@ -242,6 +246,10 @@ body {
 				background: @bg-color-image;
 				filter: saturate(.6) brightness(.8);
 				transition-property: all;
+
+				.responsive(@break-sm, { 
+					filter: none;
+				});
 				
 				&:hover {
 					filter: brightness(1) saturate(1);
@@ -566,11 +574,11 @@ body {
 	}
 	.project-grid-enter {
 		opacity: 0;
-		transform: scale(.5);
+		transform: translateY(10%);
 	}
 	.project-grid-enter-active {
-		transition: all .4s ease;
-		transition-delay: calc( .1s * var(--i) );
+		transition: all .3s ease;
+		transition-delay: calc( .3s + ( .1s * var(--i) ) );
 	}
 
 	@keyframes anim-scroll-arrow {
