@@ -552,7 +552,7 @@ body {
 	.project-enter-active, .project-leave-active {
 		transition-property: opacity;
 	}
-	.project-enter, .project-leave-to /* .fade-leave-active below version 2.1.8 */ {
+	.project-enter, .project-leave-to {
 		opacity: 0;
 	}
 	.media-enter-active {
@@ -563,6 +563,14 @@ body {
 	}
 	.media-enter {
 		opacity: 0;
+	}
+	.project-grid-enter {
+		opacity: 0;
+		transform: scale(.5);
+	}
+	.project-grid-enter-active {
+		transition: all .4s ease;
+		transition-delay: calc( .1s * var(--i) );
 	}
 
 	@keyframes anim-scroll-arrow {

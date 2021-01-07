@@ -74,8 +74,15 @@
 			</div>
 
 			<div class="mr--group" v-for="projectGroup in projectGroups">
-				<ul class="mr--projects">
-					<li class="mr--project" v-for="project in getGroupProjects(projectGroup)" v-if="project.display">
+				<transition-group appear name="project-grid" class="mr--projects" tag="ul">
+					<li 
+						class="mr--project" 
+						v-for="( project, index ) in getGroupProjects(projectGroup)" 
+						v-if="project.display"
+						v-bind:key="project"
+						:style="{ '--i': index }"
+						>
+
 						<div 
 							class="mr--project-thumbnail" 
 							>
@@ -92,6 +99,7 @@
 						</div>
 					</li>
 				</ul>
+				</transition-group>
 			</div>
 
 		</div>
