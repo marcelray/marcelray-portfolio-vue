@@ -9,7 +9,7 @@
 @font-copy: 'Merriweather', 'Cambria', 'Cochin', 'Georgia', 'Times', 'Times New Roman', serif;
 // @font-copy: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Segoe UI', sans-serif;
 
-@color-accent: #77064f;
+@color-accent: #972079;
 @color-accent-hover: lighten(@color-accent,10);
 @button-background: linear-gradient(333deg, #123438 0%, #5a1a4e 82%, #8e075e 100%);
 @button-background-light: linear-gradient(333deg, #2c7e87 0%, #aa3194 82%, #a84d88 100%);
@@ -35,6 +35,7 @@ body {
 }
 * { 
 	text-rendering: optimizeLegibility;
+	box-sizing: border-box;
 }
 a {
 	color: #000 !important;
@@ -59,7 +60,7 @@ h1,h2,h3,h4,h5,h6 {
 	background: #fff;
 	border: 1px solid #f9f9f9;
 	width: 8.5in;
-	padding: 4rem;
+	padding: .7in;
 	margin: 2rem auto;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1), 0 0 10px rgba(0, 0, 0, 0.03);
 
@@ -158,24 +159,15 @@ h1,h2,h3,h4,h5,h6 {
 		}
 	}
 
-	.column.primary .section h2 {
-		margin-bottom: .5rem;
-	}
-	.column.secondary .section { 
-		margin-bottom: 1.1rem;
-		h2 {
-			margin-bottom: .2rem;
-		}
-	}
-
 	.section {
-		margin: 0rem 0 2rem;
-
+		margin: 0rem 0 1.5rem;
+		
 		&:last-child {
 			margin-bottom: 0;
 		}
-
+		
 		h2 {
+			margin-bottom: .5rem;
 			text-transform: uppercase;
 			color: #999;
 		}
@@ -210,7 +202,7 @@ h1,h2,h3,h4,h5,h6 {
 
 				.organization, .role {
 					display: inline-block;
-					font-size: 1rem;
+					font-size: .9rem;
 					font-weight: 200;
 					line-height: 150%;
 				}
@@ -253,7 +245,16 @@ h1,h2,h3,h4,h5,h6 {
 
 		&.section-accolades,
 		&.section-education {
-			
+			line-height: 140%;
+			.item-detail {
+				margin-bottom: .1rem;
+				padding: 0;	
+			}
+		}
+		&.section-accolades {
+			.dates {
+				line-height: 120%;
+			}
 		}
 
 		&.section-education {
