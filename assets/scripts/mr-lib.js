@@ -1,5 +1,4 @@
-// Lightweight helper functions
-// 2021 Marcel Ray
+// Lightweight helper functions to avoid jQuery
 class mrlib {
 	static query( selector ) {
 		return document.querySelectorAll(selector);
