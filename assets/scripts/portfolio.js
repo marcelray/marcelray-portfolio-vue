@@ -62,15 +62,6 @@ const app = new Vue({
 				return group.categories.indexOf(item.category) >= 0;
 			});
 		},
-		getProjectMedia: function (project, type) {
-			if (!type) {
-				return project.media;
-			} else {
-				return this.currentProject.media.filter(item => {
-					return item.type === type;
-				});
-			}
-		},
 		gaPageView(title, location) {
 			try {
 				gtag('event', 'page_view', {
@@ -99,20 +90,10 @@ const app = new Vue({
 				this.hideProjectDetails();
 			}
 		},
-		onMediaScroll: function (event) {
-			// Hide horizontal scroll arrow
-			// TODO: use a more specific selector
-			mrlib.hide('.mr--scroll-arrow-right');
-		},
 		onImageLoad: function (image) {
 			image.loaded = true;
 		}
 	},
 	computed: {
-		getCurrentProjectMedia: function (type = 'image') {
-			return this.currentProject.media.filter(item => {
-				return item.type === type;
-			});
-		}
 	}
 });

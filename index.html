@@ -34,7 +34,7 @@
 	<script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
 	
 	<script src="/assets/scripts/mr-lib.js"></script>
-	<script defer src="/assets/scripts/components.vue"></script>
+	<script defer src="/assets/scripts/components.js"></script>
 	<script defer src="/assets/scripts/portfolio.js"></script>
 
 
@@ -104,82 +104,16 @@
 
 		</div>
 
-		<transition name="project" mode="out-in">
+		<transition name="modal" mode="out-in">
 			<div class="mr--modal-container" v-if="currentProject">
 
 				<div class="mr--modal-screen" @click="hideProjectDetails()"></div>
 
-				<div class="mr--project-detail mr--modal" v-if="currentProject">
-
-					<button class="mr--close-button" @click="hideProjectDetails()">&times;</button>
-					<div class="mr--project-loadIndicator" class="loadIndicator" style="display: none;"></div>
-
-					<div class="mr--content">
-
-						<div class="mr--project-media">
-							<div class="mr--loader">
-								<div class="double-bounce1"></div>
-								<div class="double-bounce2"></div>
-							</div>
-							<div class="mr--scroll-arrow-right" v-if="currentProject.media.length > 1"></div>
-							<ul class="mr--project-media-items" @scroll="onMediaScroll()" :class="{ 'mr--media-single': currentProject.media.length === 1 }">
-								<li class="mr--media-container" v-for="media in getProjectMedia(currentProject,'video')">
-									<video 
-										height="100%" 
-										controlsList="nodownload" 
-										controls autostart playsinline autoplay 
-										>
-										<!-- :poster="'/assets/projects/'+currentProject.id+'/'+media.poster" -->
-										<source :src="'http://marcelray.com/assets/projects/'+currentProject.id+'/'+media.url" type="video/mp4" />
-									</video></li>
-								<li class="mr--media-container" v-for="media in getProjectMedia(currentProject,'image')">
-									<mr-image
-										:src="'http://marcelray.com/utils/slir/?h=400&c=16x9&q=90&i=/assets/projects/'+currentProject.id+'/'+media.url+'&random='+Math.random()"
-										:alt="currentProject.title"
-										></mr-image>
-									</li>
-							</ul>
-						</div>
-
-						<div class="mr--header">
-							<h1 class="mr--project-title" v-html="currentProject.title"></h1>
-							<div class="mr--project-intro" v-html="currentProject.intro"></div>
-						</div>
-
-						<div class="mr--project-details">
-
-							<div class="mr--project-detail-category">
-								<h2 class="mr--title">Company/Client</h2>
-								<div class="mr--content" v-html="currentProject.client"></div>
-							</div>
-
-							<div class="mr--project-detail-category">
-								<h2 class="mr--title">Roles</h2>
-								<div class="mr--content" v-html="currentProject.roles"></div>
-							</div>
-
-							<div class="mr--project-detail-category">
-								<h2 class="mr--title">Project Brief</h2>
-								<div class="mr--content" v-html="currentProject.description"></div>
-							</div>
-
-							<div class="mr--project-detail-category" v-if="currentProject.colophon">
-								<h2 class="mr--title">Colophon</h2>
-								<div class="mr--content" v-html="currentProject.colophon"></div>
-							</div>
-
-							<div class="mr--project-detail-category" v-if="currentProject.links.length > 0">
-								<h2 class="mr--title">More Info</h2>
-								<ul>
-									<li v-for="link in currentProject.links">
-										<a :href="link.url" target="_blank" v-html="link.title"></a>
-									</li>
-									<li></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+				<project-detail
+					:project="currentProject"
+					@close="hideProjectDetails()"
+					class="mr--modal"
+					></project-detail>
 			</div>
 		</transition>
 
