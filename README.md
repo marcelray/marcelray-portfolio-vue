@@ -2,7 +2,7 @@
 
 Hand-written professional portfolio, completely rebuilt and redesigned in 2021. 
 
-Uses ES6 and all run-time based libraries (Vue.js, LESS) for portability and ease in development/management. I would have more fun with build tools and transpiling for larger-scale projects or those with performance and compatability considerations.
+Uses ES6 and all run-time based libraries (Vue.js, LESS) for portability and ease in development/management. I have fun with build tools and transpiling on larger-scale projects or those with performance and compatability considerations.
 
 ## Features Backlog
 
