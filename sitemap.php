@@ -14,13 +14,13 @@ header("Content-type: text/xml");
 
 	<url>
 		<loc>http://marcelray.com/</loc>
-		<lastmod>2018-07-10T02:09:30+00:00</lastmod>
+		<lastmod><?=date('c')?></lastmod>
 		<priority>1.00</priority>
 	</url>
 <?php foreach ( $projectsData['projects'] as $iProject ) : ?>
 	<url>
 		<loc>http://marcelray.com/#<?=$iProject['id']?></loc>
-		<lastmod>2018-07-10T02:09:30+00:00</lastmod>
+		<lastmod><?=date('c')?></lastmod>
 		<priority>0.64</priority>
 	</url>
 <?php endforeach; ?>
@@ -28,14 +28,14 @@ header("Content-type: text/xml");
 		<loc>
 			http://marcelray.com/assets/downloads/marcelray-resume.pdf
 		</loc>
-		<lastmod>2018-07-07T23:45:28+00:00</lastmod>
+		<lastmod><?=date('c')?></lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
 		<loc>
 			http://marcelray.com/assets/downloads/marcelray-resume.txt
 		</loc>
-		<lastmod>2018-07-07T23:43:51+00:00</lastmod>
+		<lastmod><?=date('c')?></lastmod>
 		<priority>0.64</priority>
 	</url>
 
