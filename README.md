@@ -3,7 +3,7 @@ Vue.js-based portfolio site, updated in 2021.
 
 ## Overview
 
-Hand-written personal portfolio. Uses all run-time based libraries (Vue.js, LESS) for portability and ease in development/management. I would have more fun with build tools and transpiling for larger-scale projects or those with performance and compatability considerations.
+Hand-written professional portfolio. Uses all run-time based libraries (Vue.js, LESS) for portability and ease in development/management. I would have more fun with build tools and transpiling for larger-scale projects or those with performance and compatability considerations.
 
 ## Features Backlog
 
