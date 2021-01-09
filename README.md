@@ -9,3 +9,4 @@ Hand-written personal portfolio. Uses all run-time based libraries (Vue.js, LESS
 
 - [ ] Add case studies with documented process
 - [ ] Add 'About me' profile page
+- [ ] Create 'Labs' section for experiments and personal projects
