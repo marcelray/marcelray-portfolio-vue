@@ -1,4 +1,4 @@
-# Marcel Ray Professional Portfolio
+# Marcel Ray Portfolio
 Vue.js-based portfolio site, updated in 2021.
 
 ## Overview
