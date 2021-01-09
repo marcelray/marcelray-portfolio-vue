@@ -5,7 +5,7 @@
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Design-minded technologist focused on ideating, prototyping, and developing innovative experiences that connect physical and digital worlds.">
+	<meta name="description" content="Design technologist focused on helping creative teams quickly ideate, prototype, and test innovative experiences that connect physical and digital worlds.">
 
 	<title>Marcel Ray, Design Technologist</title>
 
@@ -36,7 +36,6 @@
 	<script src="/assets/scripts/mr-lib.js"></script>
 	<script defer src="/assets/scripts/components.js"></script>
 	<script defer src="/assets/scripts/portfolio.js"></script>
-
 
 </head>
 
@@ -82,15 +81,12 @@
 						v-bind:key="project"
 						:style="{ '--i': index }"
 						>
-
-						<div 
-							class="mr--project-thumbnail" 
-							>
+						<div class="mr--project-thumbnail">
 							<a :href="'#' + project.id">
-								<mr-image
+								<loader-image
 									:src="'http://marcelray.com/utils/slir/?w=600&c=10x7&q=90&i=/assets/projects/'+project.id+'/'+project.thumbnail.url" 
 									:alt="project.title" 
-									></mr-image>
+									></loader-image>
 								</a>
 						</div>
 						<div class="mr--content">

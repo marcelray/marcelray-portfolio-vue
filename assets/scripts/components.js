@@ -1,4 +1,4 @@
-Vue.component('mr-image', {
+Vue.component('loader-image', {
 	props: [ 'src', 'alt' ],
 	data: function () {
 		return {
@@ -76,10 +76,10 @@ Vue.component('project-detail', {
 							<source :src="'http://marcelray.com/assets/projects/'+project.id+'/'+media.url" type="video/mp4" />
 						</video></li>
 					<li class="mr--media-container" v-for="media in getProjectMedia(project,'image')">
-						<mr-image
+						<loader-image
 							:src="'http://marcelray.com/utils/slir/?h=400&c=16x9&q=90&i=/assets/projects/'+project.id+'/'+media.url+'&random='+Math.random()"
 							:alt="project.title"
-							></mr-image>
+							></loader-image>
 						</li>
 				</ul>
 			</div>
