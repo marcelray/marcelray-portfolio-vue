@@ -25,16 +25,12 @@ header("Content-type: text/xml");
 	</url>
 <?php endforeach; ?>
 	<url>
-		<loc>
-			http://marcelray.com/assets/downloads/marcelray-resume.pdf
-		</loc>
+		<loc>http://marcelray.com/assets/downloads/marcelray-resume.pdf</loc>
 		<lastmod><?=date('c')?></lastmod>
 		<priority>0.64</priority>
 	</url>
 	<url>
-		<loc>
-			http://marcelray.com/assets/downloads/marcelray-resume.txt
-		</loc>
+		<loc>http://marcelray.com/assets/downloads/marcelray-resume.txt</loc>
 		<lastmod><?=date('c')?></lastmod>
 		<priority>0.64</priority>
 	</url>
