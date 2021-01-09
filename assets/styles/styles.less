@@ -541,6 +541,7 @@ body {
 		display: block;
 		margin: 6rem auto 0;
 		text-align: center;
+		justify-content: center;
 
 		* {
 			font-family: @font-titles;
@@ -551,7 +552,22 @@ body {
 		}
 	
 		.mr--copyright {
-			color: #aaa;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			.mr--content {
+				color: #aaa;
+			}
+			.mr--source-link {
+				margin-left: .3rem;
+			}
+
+			.icon-github {
+				opacity: .7;
+				height: 1.3rem;
+			}
 		}
 	}
 
