@@ -10,3 +10,4 @@ Hand-written personal portfolio. Uses all run-time based libraries (Vue.js, LESS
 - [ ] Add case studies with documented process
 - [ ] Add 'About me' profile page
 - [ ] Create 'Labs' section for experiments and personal projects
+- [ ] Pie in the sky: Create a 3D WebXR version?
