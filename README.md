@@ -1,8 +1,6 @@
-# Marcel Ray Portfolio
+# Portfolio
 
-Hand-written professional portfolio, completely rebuilt and redesigned in 2021. 
-
-Uses ES6 and all run-time based libraries (Vue.js, LESS) for portability and ease in development/management. I have fun with build tools and transpiling on larger-scale projects or those with performance and compatability considerations.
+Uses ES6 and run-time based libraries (Vue.js, LESS) for portability and ease in development/management.
 
 ## Features Backlog
 
