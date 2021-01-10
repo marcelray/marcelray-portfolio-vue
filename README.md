@@ -1,6 +1,6 @@
 # Portfolio
 
-Uses ES6 and run-time based libraries (Vue.js, LESS) for portability and ease in development/management.
+Uses ES6 and run-time frameworks (Vue.js, LESS) for portability and ease in development/management.
 
 ## Features Backlog
 
